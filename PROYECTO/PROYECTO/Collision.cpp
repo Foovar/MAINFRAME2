@@ -15,9 +15,24 @@ namespace DevJAD {
         
     }
     
-    bool Collision::CheckSpriteCollision(sf::Sprite sprite1, sf::Sprite sprite2)
+    bool Collision::CheckSpriteCollision(sf::Sprite sprite1, sf::Sprite sprite2, float ax, float ay, float bx, float by)
     {
-        return sprite1.getGlobalBounds().intersects(sprite2.getGlobalBounds());
+        sf::Rect<float> rect1 = sprite1.getGlobalBounds();
+        sf::Rect<float> rect2 = sprite2.getGlobalBounds();
+        if(ax || ay){
+            rect1.width -= ax;
+            rect1.height -= ay;
+            rect1.top += ay / 2;
+            rect1.left += ax / 2;
+        }
+        if(bx || by){
+            rect2.width -= bx;
+            rect2.height -= by;
+            rect2.top += by / 2;
+            rect2.left += bx / 2;
+        }
+        
+        return rect1.intersects(rect2);
     }
     
     bool Collision::CheckSpriteCollision(sf::Sprite sprite1, float scale1, sf::Sprite sprite2, float scale2)

@@ -52,20 +52,25 @@ namespace DevJAD {
         while (this->data->window.pollEvent(event)) {
             if(sf::Event::Closed == event.type) this->data->window.close();
             if(sf::Event::KeyPressed == event.type){
+                float originalXPos = this->viewScreen.getCenter().x - this->fakeMario->GetSprite().getPosition().x;
+                
                 if(event.key.code == sf::Keyboard::Left){
-                    //this->tarzan->SetState(GAME_MOVE_TO_LEFT);
-                    this->fakeMario->SetState(GAME_MOVE_TO_LEFT);
+                    if(this->viewScreen.getSize().x / 2 - originalXPos > 0){
+                        this->fakeMario->SetState(GAME_MOVE_TO_LEFT);
+                    }
                 }else if(event.key.code == sf::Keyboard::Right){
-                    //this->tarzan->SetState(GAME_MOVE_TO_RIGTH);
-                    this->fakeMario->SetState(GAME_MOVE_TO_RIGTH);
+                    if(originalXPos * -1 < (this->viewScreen.getSize().x / 2 - this->fakeMario->GetSprite().getLocalBounds().width)){
+                        this->fakeMario->SetState(GAME_MOVE_TO_RIGTH);
+                    }
                 }else if(event.key.code == sf::Keyboard::Up){
-                    //this->tarzan->SetState(GAME_MOVE_TO_UP);
-                    this->fakeMario->SetState(GAME_MOVE_TO_UP);
+                    if(this->fakeMario->GetSprite().getPosition().y > this->background.getGlobalBounds().height / 2){
+                        this->fakeMario->SetState(GAME_MOVE_TO_UP);
+                    }
                 }else if(event.key.code == sf::Keyboard::Down){
-                    //this->tarzan->SetState(GAME_MOVE_TO_DOWN);
-                    this->fakeMario->SetState(GAME_MOVE_TO_DOWN);
+                    if(this->fakeMario->GetSprite().getPosition().y < this->background.getGlobalBounds().height - (this->coral.getGlobalBounds().height / 2)){
+                        this->fakeMario->SetState(GAME_MOVE_TO_DOWN);
+                    }
                 }else if(event.key.code == sf::Keyboard::X){
-                    //this->tarzan->SetState(IS_ATTACKING);
                     this->fakeMario->SetState(IS_ATTACKING);
                 }
             }
@@ -74,15 +79,12 @@ namespace DevJAD {
     
     void SeaGameState::Update(float dt){
         
-        
-        //this->sharks->IsCollide( this->tarzan->GetSprite() );
-        
         if(this->gameState != IS_GAME_OVER){
             
             std::vector<SharkEntity> sharkEntities = this->sharks->GetEntities();
             for(unsigned short int i = 0; i< sharkEntities.size(); i++){
                 
-                if(this->collision.CheckSpriteCollision(sharkEntities.at(i).GetSprite(), this->fakeMario->GetSprite() )){
+                if(this->collision.CheckSpriteCollision(sharkEntities.at(i).GetSprite(), this->fakeMario->GetSprite(), 20, 20, 30, 20 )){
                     if(sharkEntities.at(i).GetState() != SHARK_DIE){
                         this->sharks->SetSharkState(i, SHARK_ATTACK);
                     }
@@ -110,12 +112,8 @@ namespace DevJAD {
                 
             }
             
-            
             this->sharks->UpdateSharks(dt);
-            
-            //this->tarzan->Animate(dt);
             this->fakeMario->Animate(dt);
-            //this->tarzan->Update(dt);
             this->fakeMario->Update(dt);
             
             if(this->clock.getElapsedTime().asSeconds() > 0.01) {
@@ -152,7 +150,6 @@ namespace DevJAD {
         this->data->window.setView(this->viewScreen);
         this->data->window.draw(this->background);
         this->data->window.draw(this->coral);
-        //this->tarzan->Draw();
         this->fakeMario->Draw();
         this->sharks->DrawSharks();
         this->flash->Draw();

@@ -28,6 +28,13 @@ namespace DevJAD {
     
     void FakeMario::Draw(){
         this->data->window.draw(this->fakeMarioSprite);
+        // Show collision border
+        /*
+        sf::RectangleShape border;
+        border.setSize(sf::Vector2f(this->fakeMarioSprite.getGlobalBounds().width - 30, this->fakeMarioSprite.getGlobalBounds().height - 20));
+        border.setPosition(this->fakeMarioSprite.getPosition().x + 15, this->fakeMarioSprite.getPosition().y+10);
+        border.setFillColor(sf::Color(255,255,255,128));
+        this->data->window.draw(border);*/
     }
     
     void FakeMario::Animate(float dt){
@@ -68,11 +75,7 @@ namespace DevJAD {
             this->state = IS_SWIMMING;
         }
         
-        if(this->fakeMarioSprite.getPosition().x < 0){
-            
-        }
-        
-        this->fakeMarioSprite.setPosition(this->data->window.getView().getCenter().x+ this->movementX, (this->data->window.getSize().y - this->data->window.getSize().y/4) + this->movementY );
+        this->fakeMarioSprite.setPosition(this->data->window.getView().getCenter().x + this->movementX, (this->data->window.getSize().y - this->data->window.getSize().y/4) + this->movementY );
         
     }
     

@@ -21,7 +21,6 @@ namespace DevJAD {
         }else{
            sharkEntity = new SharkEntity(this->data->assets.GetTexture("shark"), sf::Vector2f(0.4,0.4));
         }
-        
         int min = this->data->window.getSize().y / 2;
         int randomPosition = rand() % ((this->data->window.getSize().y - 100) - min + 1) + min;
         sharkEntity->SetPosition(this->data->window.getView().getCenter().x + (this->data->window.getView().getSize().x/2), randomPosition);
@@ -48,6 +47,13 @@ namespace DevJAD {
     void SharkController::DrawSharks(){
         for (unsigned short int i = 0; i < this->sharks.size(); i++) {
            this->data->window.draw(this->sharks.at(i).GetSprite());
+            // Show collision border;
+            /*
+            sf::RectangleShape border;
+            border.setSize(sf::Vector2f(this->sharks.at(i).GetSprite().getGlobalBounds().width - 20, this->sharks.at(i).GetSprite().getGlobalBounds().height - 20));
+            border.setPosition(this->sharks.at(i).GetSprite().getPosition().x+10, this->sharks.at(i).GetSprite().getPosition().y+10);
+            border.setFillColor(sf::Color(255,255,255,128));
+            this->data->window.draw(border);*/
         }
     }
     
