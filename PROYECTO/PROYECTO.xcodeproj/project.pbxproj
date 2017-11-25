@@ -75,6 +75,7 @@
 		FA52DC9F1FAAF44000EEF301 /* AssetsManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetsManager.hpp; sourceTree = "<group>"; };
 		FA52DCA11FAAF79700EEF301 /* InputManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		FA52DCA21FAAF79700EEF301 /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
+		FA5B8AB91FC9322D007F5C4F /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
 		FA7C6CDF1FAC33DB0064545E /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		FA7C6CE01FAC33DB0064545E /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		FA7C6CE21FAC3D220064545E /* GameOverState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 				FA4412EC1FAAFEC400E5E3A0 /* GameStates */,
 				FAA822D21FB90C5F0077B7B5 /* Flash.cpp */,
 				FAA822D31FB90C5F0077B7B5 /* Flash.hpp */,
+				FA5B8AB91FC9322D007F5C4F /* Utils.hpp */,
 			);
 			path = PROYECTO;
 			sourceTree = "<group>";

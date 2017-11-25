@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
+#include "Utils.hpp"
 
 namespace DevJAD {
     

@@ -5,9 +5,11 @@
 //  Created by DevJAD on 1/11/17.
 //  Copyright © 2017 DevJAD. All rights reserved.
 //
-
+#pragma once
 #ifndef Header_h
 #define Header_h
+
+#include <SFML/Graphics.hpp>
 
 #define SCREEN_WIDTH 1324.0f
 #define SCREEN_HEIGHT 1024.0f
@@ -61,6 +63,5 @@
 #define SHARK_SWIMMING 0
 #define SHARK_DIE 1
 #define SHARK_ATTACK 2
-
 
 #endif /* Header_h */

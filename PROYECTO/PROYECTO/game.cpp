@@ -18,7 +18,7 @@ namespace DevJAD {
             this->data->window.create(sf::VideoMode(LARGE_SCREEN_SIZE_WIDTH, LARGE_SCREEN_SIZE_HEIGHT), title, sf::Style::Close | sf::Style::Titlebar);
         }
         this->data->window.setFramerateLimit(60);
-        this->data->screenType = SCREEN_SIZE_TYPE_MEDIUM;
+        this->data->screenType = screen_type;
         this->data->machine.AddState(StateRef(new SplashState(this->data)));
         //this->data->machine.AddState(StateRef(new GameOverState(this->data)));
         this->Run();

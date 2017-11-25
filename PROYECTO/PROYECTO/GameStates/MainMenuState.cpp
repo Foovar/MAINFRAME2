@@ -23,22 +23,36 @@ namespace DevJAD {
         this->data->assets.LoadTexture("main background", MAIN_BACKGROUND_FILEPATH);
         this->data->assets.LoadTexture("main menu", MAIN_MENU_FILEPATH);
         this->data->assets.LoadTexture("main title", MAIN_TITLE_FILEPATH);
-        
+        this->menu.setTexture(this->data->assets.GetTexture("main menu"));
         this->background.setTexture(this->data->assets.GetTexture("main background"));
         this->title.setTexture(this->data->assets.GetTexture("main title"));
         
+        if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
+            this->background.setScale(0.9, 0.9);
+            this->title.setScale(0.5, 0.5);
+            this->menu.setScale(0.5, 0.5);
+            this->menuItemStart.setScale(this->menu.getScale());
+            this->menuItemOptions.setScale(this->menu.getScale());
+            this->menuItemCredits.setScale(this->menu.getScale());
+            this->menuItemQuit.setScale(this->menu.getScale());
+        }else
+            this->background.setScale(1.5, 1.5);
+        
         this->CreateMenu();
         
-        //this->background.setScale(1.5, 1.5);
-        this->title.setPosition(sf::Vector2f(
-             SCREEN_WIDTH / 2 - this->title.getGlobalBounds().width / 2,
-             (SCREEN_HEIGHT / 2 - this->title.getGlobalBounds().height / 2 ) - this->data->assets.GetTexture("main menu").getSize().y/4) );
+        this->title.setPosition(getCenterPosition(this->data->window.getSize(), this->title.getGlobalBounds()));
+        this->title.setPosition(sf::Vector2f(this->title.getPosition().x, this->title.getPosition().y - this->menu.getGlobalBounds().height/4) );
+        
     }
     
     void MainMenuState::CreateMenu(){
-        sf::Vector2<unsigned int> menuSize =this->data->assets.GetTexture("main menu").getSize();
-        startMenuPositionX = ((SCREEN_WIDTH / 2) - 8) - menuSize.x / 2;
-        startMenuPositionY = SCREEN_HEIGHT / 2 - 60;
+        sf::Vector2<unsigned int> menuSize =  sf::Vector2<unsigned int>(this->menu.getGlobalBounds().width * ( this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM ? 2 : 1 ), this->menu.getGlobalBounds().height); //this->data->assets.GetTexture("main menu").getSize();
+        
+        startMenuPositionX = ((this->data->window.getSize().x / 2) - 8) - menuSize.x / ( this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM ? 4 : 2 );
+        if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
+            startMenuPositionX += 3;
+        }
+        startMenuPositionY = this->data->window.getSize().y / 2 - 60 /( this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM ? 2 : 1 );
         
         this->menuItemStart.setTexture(this->data->assets.GetTexture("main menu"));
         this->menuItemStart.setTextureRect(sf::IntRect(0, 20, menuSize.x, 90));
@@ -60,7 +74,7 @@ namespace DevJAD {
     void MainMenuState::HandleInput(){
         sf::Event event;
         sf::Vector2i mpos;
-         sf::Vector2<unsigned int> menuSize =this->data->assets.GetTexture("main menu").getSize();
+         sf::Vector2<unsigned int> menuSize = this->data->assets.GetTexture("main menu").getSize();
         
         while (this->data->window.pollEvent(event)) {
             if(sf::Event::Closed == event.type) this->data->window.close();
@@ -78,6 +92,7 @@ namespace DevJAD {
                 }else if(this->data->input.IsSpriteHover(this->menuItemQuit, this->data->window)){
                     this->menuItemQuit.setTextureRect(sf::IntRect(0, 20+90+95+86+ menuSize.y / 2, menuSize.x, 120));
                 }
+                
                 
             }
             
