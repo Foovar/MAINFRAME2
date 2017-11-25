@@ -120,6 +120,8 @@ namespace DevJAD {
                 if(this->maxDuration < this->background.getGlobalBounds().width){
                     this->viewScreen.move((dt*200), 0);
                     this->maxDuration+=dt*200;
+                }else{
+                    this->flash->Show(dt);
                 } // level terminado -> pasar al siguiente nivel.
                 this->clock.restart();
             }

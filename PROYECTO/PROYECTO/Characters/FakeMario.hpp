@@ -23,6 +23,7 @@ namespace DevJAD {
         sf::Clock clock;
         int state, movementX, movementY;
         unsigned int framesInterator;
+        float timeAttack;
         
     public:
         FakeMario(GameDataRef _data);

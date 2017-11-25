@@ -7,7 +7,7 @@
 //
 
 #include "FakeMario.hpp"
-
+#include "iostream"
 namespace DevJAD {
     FakeMario::FakeMario(GameDataRef _data): data(_data){
         this->fakeMarioTexture = this->data->assets.GetTexture("character 02");
@@ -19,11 +19,11 @@ namespace DevJAD {
             this->fakeMarioSprite.setScale(0.5, 0.5);
         this->fakeMarioSprite.setPosition(100, this->data->window.getSize().y - this->fakeMarioSprite.getGlobalBounds().height * 2);
         
-        
         this->state = IS_SWIMMING;
         framesInterator = 0;
         this->movementX = 0;
         this->movementY = 0;
+        this->timeAttack = 0;
     }
     
     void FakeMario::Draw(){
@@ -38,15 +38,24 @@ namespace DevJAD {
     }
     
     void FakeMario::Animate(float dt){
-        
         if(this->clock.getElapsedTime().asSeconds() > 0.1f){
-            if(framesInterator > 10){
-                framesInterator = 0;
+            if(this->state != IS_ATTACKING){
+                if(framesInterator > 10){
+                    framesInterator = 0;
+                }else
+                    framesInterator++;
+                this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 0, 110, 85));
             }else{
-                framesInterator++;
+                this->timeAttack = this->timeAttack > 0 ? this->timeAttack : 19.0;
+                if(framesInterator > 19){
+                    framesInterator = 0;
+                }else
+                    framesInterator++;
+                std::cout << "Intervalo " << this->timeAttack  << std::endl;
+                this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 85, 110, 87));
+                this->timeAttack--;
             }
             
-            this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 0, 110, 85));
             this->clock.restart();
         }
     }
@@ -57,7 +66,7 @@ namespace DevJAD {
     
     void FakeMario::Update(float dt){
         int speed = 850 * dt;
-        if(IS_SWIMMING != this->state){
+        if(IS_SWIMMING != this->state && this->state != IS_ATTACKING){
             switch (this->state) {
                 case GAME_MOVE_TO_UP:
                     this->movementY -=  speed;
@@ -73,6 +82,10 @@ namespace DevJAD {
                     break;
             }
             this->state = IS_SWIMMING;
+            
+        }else if(this->state == IS_ATTACKING){
+            if(this->timeAttack <= 0)
+                this->state = IS_SWIMMING;
         }
         
         this->fakeMarioSprite.setPosition(this->data->window.getView().getCenter().x + this->movementX, (this->data->window.getSize().y - this->data->window.getSize().y/4) + this->movementY );
