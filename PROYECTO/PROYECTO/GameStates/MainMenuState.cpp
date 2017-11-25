@@ -29,7 +29,7 @@ namespace DevJAD {
         
         this->CreateMenu();
         
-        this->background.setScale(1.5, 1.5);
+        //this->background.setScale(1.5, 1.5);
         this->title.setPosition(sf::Vector2f(
              SCREEN_WIDTH / 2 - this->title.getGlobalBounds().width / 2,
              (SCREEN_HEIGHT / 2 - this->title.getGlobalBounds().height / 2 ) - this->data->assets.GetTexture("main menu").getSize().y/4) );

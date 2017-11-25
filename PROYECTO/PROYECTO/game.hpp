@@ -12,6 +12,7 @@
 #include <memory>
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "Constants.hpp"
 #include "StateMachine.hpp"
 #include "AssetsManager.hpp"
 #include "InputManager.hpp"
@@ -22,6 +23,7 @@ namespace DevJAD {
         sf::RenderWindow window;
         AssetsManager assets;
         InputManager input;
+        int screenType;
     };
     
     typedef std::shared_ptr<GameData> GameDataRef;
@@ -32,7 +34,7 @@ namespace DevJAD {
         GameDataRef data = std::make_shared<GameData>();
         void Run();
     public:
-        Game(int width, int height, std::string title);
+        Game(std::string title, int screen_type = SCREEN_SIZE_TYPE_MEDIUM);
     };
     
 }

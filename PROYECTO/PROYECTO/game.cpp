@@ -7,13 +7,18 @@
 //
 
 #include "Game.hpp"
-#include "GameStates/SplashState.hpp"
-#include "GameOverState.hpp"
+#include "SplashState.hpp"
+
 namespace DevJAD {
     
-    Game::Game(int width, int height, std::string title){
-        this->data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
+    Game::Game(std::string title, int screen_type){
+        if(screen_type == SCREEN_SIZE_TYPE_MEDIUM){
+            this->data->window.create(sf::VideoMode(MEDIUM_SCREEN_SIZE_WIDTH, MEDIUM_SCREEN_SIZE_HEIGHT), title, sf::Style::Close | sf::Style::Titlebar);
+        }else{
+            this->data->window.create(sf::VideoMode(LARGE_SCREEN_SIZE_WIDTH, LARGE_SCREEN_SIZE_HEIGHT), title, sf::Style::Close | sf::Style::Titlebar);
+        }
         this->data->window.setFramerateLimit(60);
+        this->data->screenType = SCREEN_SIZE_TYPE_MEDIUM;
         this->data->machine.AddState(StateRef(new SplashState(this->data)));
         //this->data->machine.AddState(StateRef(new GameOverState(this->data)));
         this->Run();

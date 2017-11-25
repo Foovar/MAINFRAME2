@@ -20,14 +20,14 @@ namespace DevJAD {
     void SplashState::Init(){
         this->data->assets.LoadTexture("splash_logo", SPLASH_LOGO_FILEPATH);
         this->data->assets.LoadTexture("splash_extra", SPLASH_EXTRA_FILEPATH);
-        
         this->data->assets.LoadTexture("sea background", SEA_BACKGROUND_FILEPATH);
-        
-        
         this->logo.setTexture(this->data->assets.GetTexture("splash_logo"));
         this->extra.setTexture(this->data->assets.GetTexture("splash_extra"));
+        
+        //this->logo.setScale(this->data->assets.GetTexture("splash_logo").getSize().x/SCREEN_WIDTH + 1, this->logo.getGlobalBounds().width/SCREEN_HEIGHT + 1);
+        
         this->extra.setPosition(sf::Vector2f(this->data->window.getSize().x / 2 - this->extra.getGlobalBounds().width/2, -120));
-        this->logo.setPosition(this->data->window.getSize().x / 2 - this->logo.getGlobalBounds().width / 2, this->extra.getGlobalBounds().height );
+        this->logo.setPosition(this->data->window.getSize().x / 2 - this->logo.getGlobalBounds().width / 2, this->extra.getGlobalBounds().height  - (this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM ? this->extra.getGlobalBounds().height / 4 : 0 ) );
     }
     
     void SplashState::HandleInput(){

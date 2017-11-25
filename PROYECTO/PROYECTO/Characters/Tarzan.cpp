@@ -14,7 +14,7 @@ namespace DevJAD {
         this->tarzanTexture.setSmooth(true);
         this->tarzanSprite.setTexture(this->tarzanTexture);
         this->tarzanSprite.setTextureRect(sf::IntRect(0,0, 56, 32));
-        this->tarzanSprite.setScale(180 / 56, 150 / 32);
+        //this->tarzanSprite.setScale(180 / 56, 150 / 32);
         this->tarzanSprite.setPosition(100, this->data->window.getSize().y - this->tarzanSprite.getGlobalBounds().height * 2);
         
         
