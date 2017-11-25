@@ -14,13 +14,18 @@ namespace DevJAD {
     }
     
     void SharkController::SpawnSharks(){
+        DevJAD::SharkEntity * sharkEntity;
         
-        DevJAD::SharkEntity sharkEntity(this->data->assets.GetTexture("shark"));
-        //shark.setScale(0.3, 0.3);
+        if(this->data->screenType == SCREEN_SIZE_TYPE_LARGE){
+            sharkEntity = new SharkEntity(this->data->assets.GetTexture("shark"), sf::Vector2f(0.8,0.8));
+        }else{
+           sharkEntity = new SharkEntity(this->data->assets.GetTexture("shark"), sf::Vector2f(0.4,0.4));
+        }
+        
         int min = this->data->window.getSize().y / 2;
         int randomPosition = rand() % ((this->data->window.getSize().y - 100) - min + 1) + min;
-        sharkEntity.SetPosition(this->data->window.getView().getCenter().x + (this->data->window.getView().getSize().x/2), randomPosition);
-        this->sharks.push_back(sharkEntity);
+        sharkEntity->SetPosition(this->data->window.getView().getCenter().x + (this->data->window.getView().getSize().x/2), randomPosition);
+        this->sharks.push_back(*sharkEntity);
     }
     
     void SharkController::UpdateSharks(float dt){
@@ -57,6 +62,10 @@ namespace DevJAD {
     
     void SharkController::SetSharkState(int shark, int state){
         this->sharks.at(shark).SetState(state);
+    }
+    
+    void SharkController::SetScale(float x, float y){
+        this->scale = sf::Vector2f(x, y);
     }
     
 }

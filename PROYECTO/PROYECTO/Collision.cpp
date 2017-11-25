@@ -24,7 +24,10 @@ namespace DevJAD {
     {
         sprite1.setScale(scale1, scale1);
         sprite2.setScale(scale2, scale2);
-        
         return sprite1.getGlobalBounds().intersects(sprite2.getGlobalBounds());
+    }
+    
+    bool Collision::CheckRectCollision(sf::FloatRect rect1, sf::FloatRect rect2){
+        return rect1.intersects(rect2);
     }
 }

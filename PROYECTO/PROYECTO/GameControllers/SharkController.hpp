@@ -22,6 +22,7 @@ namespace DevJAD {
         std::vector<SharkEntity> sharks;
         GameDataRef data;
         Collision collision;
+        sf::Vector2f scale;
     public:
         SharkController(GameDataRef data);
         void MoveSharks(float dt);
@@ -30,6 +31,7 @@ namespace DevJAD {
         void SpawnSharks();
         bool IsCollide(int i, sf::Sprite sprite);
         void SetSharkState(int shark, int state);
+        void SetScale(float x, float y);
         const std::vector<SharkEntity> &GetEntities() const;
     };
 }

@@ -9,13 +9,13 @@
 #include "SharkEntity.hpp"
 
 namespace DevJAD {
-    SharkEntity::SharkEntity(sf::Texture &texture){
+    SharkEntity::SharkEntity(sf::Texture &texture, sf::Vector2f scale){
         this->entityState = SHARK_SWIMMING;
         this->frameInterator = 0;
         texture.setSmooth(true);
-        this->swimming = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,0,143.f,95.f), 15);
-        this->attack = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,95.f,143.f,100.f), 4);
-        this->die = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,95.f + 100.f, 143.f, 100.f), 9);
+        this->swimming = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,0,143.f,95.f), 15, scale);
+        this->attack = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,95.f,143.f,100.f), 4, scale);
+        this->die = new AnimationEntityData(sf::Sprite(texture), sf::IntRect(0,95.f + 100.f, 143.f, 100.f), 9, scale);
     }
     
     void SharkEntity::SetState(int state){

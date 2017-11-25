@@ -17,6 +17,7 @@
 #include "SharkController.hpp"
 #include "Flash.hpp"
 #include "GameOverState.hpp"
+#include "FakeMario.hpp"
 
 namespace DevJAD {
     
@@ -30,6 +31,8 @@ namespace DevJAD {
         sf::View viewScreen;
         Collision collision;
         Tarzan *  tarzan;
+        FakeMario * fakeMario;
+        
         SharkController * sharks;
         float maxDuration;
         Flash * flash;

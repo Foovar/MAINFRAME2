@@ -18,6 +18,7 @@
 		FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC9B1FAADDAE00EEF301 /* StateMachine.cpp */; };
 		FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC9E1FAAF44000EEF301 /* AssetsManager.cpp */; };
 		FA52DCA31FAAF79700EEF301 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DCA11FAAF79700EEF301 /* InputManager.cpp */; };
+		FA5B8ABC1FC94D1A007F5C4F /* FakeMario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */; };
 		FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CDF1FAC33DB0064545E /* GameState.cpp */; };
 		FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CE21FAC3D220064545E /* GameOverState.cpp */; };
 		FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA822D21FB90C5F0077B7B5 /* Flash.cpp */; };
@@ -76,6 +77,8 @@
 		FA52DCA11FAAF79700EEF301 /* InputManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		FA52DCA21FAAF79700EEF301 /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
 		FA5B8AB91FC9322D007F5C4F /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
+		FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FakeMario.cpp; sourceTree = "<group>"; };
+		FA5B8ABB1FC94D1A007F5C4F /* FakeMario.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FakeMario.hpp; sourceTree = "<group>"; };
 		FA7C6CDF1FAC33DB0064545E /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		FA7C6CE01FAC33DB0064545E /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		FA7C6CE21FAC3D220064545E /* GameOverState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 			children = (
 				FA3878B81FAD7DED002E2541 /* Tarzan.cpp */,
 				FA3878B91FAD7DED002E2541 /* Tarzan.hpp */,
+				FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */,
+				FA5B8ABB1FC94D1A007F5C4F /* FakeMario.hpp */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				FA3878BD1FAD99AF002E2541 /* SeaGameState.cpp in Sources */,
 				FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */,
 				FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */,
+				FA5B8ABC1FC94D1A007F5C4F /* FakeMario.cpp in Sources */,
 				FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */,
 				FAAAE40F1FB37B4A00EDA356 /* SharkEntity.cpp in Sources */,
 			);

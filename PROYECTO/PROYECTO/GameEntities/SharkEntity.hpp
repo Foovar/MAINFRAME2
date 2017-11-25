@@ -21,10 +21,12 @@ namespace DevJAD {
         sf::IntRect sizes;
         float switchTime;
         
-        AnimationEntityData(sf::Sprite a, sf::IntRect b, unsigned int d, float e = 0.1){
+        AnimationEntityData(sf::Sprite a, sf::IntRect b, unsigned int d, sf::Vector2f scale  = sf::Vector2f() ,float e = 0.1){
             sprite = a;
             sprite.setTextureRect(b);
-            sprite.setScale(0.8, 0.8);
+            if(scale.x > 0 || scale.y > 0){
+                sprite.setScale(scale);
+            }
             totalFrames = d;
             switchTime = e;
             sizes = b;
@@ -44,8 +46,7 @@ namespace DevJAD {
         AnimationEntityData * die;
         
     public:
-        SharkEntity(sf::Texture &texture);
-        
+        SharkEntity(sf::Texture &texture, sf::Vector2f scale = sf::Vector2f());
         AnimationEntityData * GetCurrentAnimationData();
         void SetPosition(float x, float y);
         void SetState(int state);
