@@ -19,6 +19,8 @@
 #define MEDIUM_SCREEN_SIZE_HEIGHT 600.f
 #define LARGE_SCREEN_SIZE_HEIGHT  1024.f
 
+#define SHOT_TIME 100.f;
+
 #define SCREEN_SIZE_TYPE_MEDIUM 0
 #define SCREEN_SIZE_TYPE_LARGE 1
 
@@ -38,6 +40,20 @@
 #define IS_DEAD 6
 #define IS_GAME_OVER 7
 #define IS_PLAYING 8
+// PERSONAJES
+#define CHARACTER_STATE_WALK 0
+#define CHARACTER_STATE_JUMPING 1
+#define CHARACTER_STATE_HANG 2
+#define CHARACTER_STATE_SWIM 3
+#define CHARACTER_STATE_ATTACK 4
+#define CHARACTER_STATE_DEAD 5
+
+#define CHARACTER_MOVE_UP 20
+#define CHARACTER_MOVE_DOWN 21
+#define CHARACTER_MOVE_LEFT 22
+#define CHARACTER_MOVE_RIGTH 23
+
+#define CHARACTER_MOVE_SPEED 450.f
 // ESCENARIOS
 
 // splash
@@ -58,6 +74,7 @@
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"
 #define GAME_OVER_BUTTONS_FILEPATH "Assets/images/game_over_buttons.png"
+
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"
 #define SHARK_SWIMMING 0

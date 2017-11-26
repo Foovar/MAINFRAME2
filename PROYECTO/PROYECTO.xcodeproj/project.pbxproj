@@ -19,6 +19,9 @@
 		FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC9E1FAAF44000EEF301 /* AssetsManager.cpp */; };
 		FA52DCA31FAAF79700EEF301 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DCA11FAAF79700EEF301 /* InputManager.cpp */; };
 		FA5B8ABC1FC94D1A007F5C4F /* FakeMario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */; };
+		FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120631FCA676A00EE1482 /* ShotEntity.cpp */; };
+		FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120661FCA7BF600EE1482 /* TestState.cpp */; };
+		FA61206B1FCA8DB900EE1482 /* MarioCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120691FCA8DB900EE1482 /* MarioCharacter.cpp */; };
 		FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CDF1FAC33DB0064545E /* GameState.cpp */; };
 		FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CE21FAC3D220064545E /* GameOverState.cpp */; };
 		FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA822D21FB90C5F0077B7B5 /* Flash.cpp */; };
@@ -79,6 +82,12 @@
 		FA5B8AB91FC9322D007F5C4F /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
 		FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FakeMario.cpp; sourceTree = "<group>"; };
 		FA5B8ABB1FC94D1A007F5C4F /* FakeMario.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FakeMario.hpp; sourceTree = "<group>"; };
+		FA6120631FCA676A00EE1482 /* ShotEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShotEntity.cpp; sourceTree = "<group>"; };
+		FA6120641FCA676A00EE1482 /* ShotEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShotEntity.hpp; sourceTree = "<group>"; };
+		FA6120661FCA7BF600EE1482 /* TestState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestState.cpp; sourceTree = "<group>"; };
+		FA6120671FCA7BF600EE1482 /* TestState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestState.hpp; sourceTree = "<group>"; };
+		FA6120691FCA8DB900EE1482 /* MarioCharacter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MarioCharacter.cpp; sourceTree = "<group>"; };
+		FA61206A1FCA8DB900EE1482 /* MarioCharacter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MarioCharacter.hpp; sourceTree = "<group>"; };
 		FA7C6CDF1FAC33DB0064545E /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		FA7C6CE01FAC33DB0064545E /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		FA7C6CE21FAC3D220064545E /* GameOverState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
@@ -120,6 +129,8 @@
 				FA3878B91FAD7DED002E2541 /* Tarzan.hpp */,
 				FA5B8ABA1FC94D1A007F5C4F /* FakeMario.cpp */,
 				FA5B8ABB1FC94D1A007F5C4F /* FakeMario.hpp */,
+				FA6120691FCA8DB900EE1482 /* MarioCharacter.cpp */,
+				FA61206A1FCA8DB900EE1482 /* MarioCharacter.hpp */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -137,6 +148,8 @@
 				FA7C6CE31FAC3D220064545E /* GameOverState.hpp */,
 				FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */,
 				FA3878BC1FAD99AF002E2541 /* SeaGameState.hpp */,
+				FA6120661FCA7BF600EE1482 /* TestState.cpp */,
+				FA6120671FCA7BF600EE1482 /* TestState.hpp */,
 			);
 			path = GameStates;
 			sourceTree = "<group>";
@@ -146,6 +159,8 @@
 			children = (
 				FAAAE40D1FB37B4A00EDA356 /* SharkEntity.cpp */,
 				FAAAE40E1FB37B4A00EDA356 /* SharkEntity.hpp */,
+				FA6120631FCA676A00EE1482 /* ShotEntity.cpp */,
+				FA6120641FCA676A00EE1482 /* ShotEntity.hpp */,
 			);
 			path = GameEntities;
 			sourceTree = "<group>";
@@ -181,18 +196,18 @@
 			children = (
 				FA52DC961FAAD48B00EEF301 /* Assets */,
 				FA52DC9E1FAAF44000EEF301 /* AssetsManager.cpp */,
+				FA52DC9F1FAAF44000EEF301 /* AssetsManager.hpp */,
 				FA0E3EAE1FB0228D00A5ABDA /* Collision.cpp */,
+				FA0E3EAF1FB0228D00A5ABDA /* Collision.hpp */,
+				FA4412EA1FAAFACF00E5E3A0 /* Game.hpp */,
 				FA4412E91FAAFACF00E5E3A0 /* Game.cpp */,
 				FA52DCA11FAAF79700EEF301 /* InputManager.cpp */,
+				FA52DCA21FAAF79700EEF301 /* InputManager.hpp */,
 				FA52DC931FAAD40E00EEF301 /* main.cpp */,
 				FA52DC9B1FAADDAE00EEF301 /* StateMachine.cpp */,
-				FA52DC9F1FAAF44000EEF301 /* AssetsManager.hpp */,
-				FA0E3EAF1FB0228D00A5ABDA /* Collision.hpp */,
-				FA52DC991FAAD58700EEF301 /* Constants.hpp */,
-				FA4412EA1FAAFACF00E5E3A0 /* Game.hpp */,
-				FA52DCA21FAAF79700EEF301 /* InputManager.hpp */,
-				FA52DC9A1FAADC2500EEF301 /* State.hpp */,
 				FA52DC9C1FAADDAE00EEF301 /* StateMachine.hpp */,
+				FA52DC991FAAD58700EEF301 /* Constants.hpp */,
+				FA52DC9A1FAADC2500EEF301 /* State.hpp */,
 				FA3878B71FAD7DB4002E2541 /* Characters */,
 				FAAAE4101FB37F4900EDA356 /* GameControllers */,
 				FAAAE40C1FB37A1700EDA356 /* GameEntities */,
@@ -282,10 +297,13 @@
 				FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */,
 				FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */,
 				FA3878BA1FAD7DED002E2541 /* Tarzan.cpp in Sources */,
+				FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */,
 				FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */,
 				FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */,
 				FA3878BD1FAD99AF002E2541 /* SeaGameState.cpp in Sources */,
+				FA61206B1FCA8DB900EE1482 /* MarioCharacter.cpp in Sources */,
 				FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */,
+				FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */,
 				FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */,
 				FA5B8ABC1FC94D1A007F5C4F /* FakeMario.cpp in Sources */,
 				FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */,

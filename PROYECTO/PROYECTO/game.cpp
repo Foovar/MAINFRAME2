@@ -8,6 +8,9 @@
 
 #include "Game.hpp"
 #include "SplashState.hpp"
+#include "TestState.hpp"
+#include "SeaGameState.hpp"
+#include "MainMenuState.hpp"
 
 namespace DevJAD {
     
@@ -19,6 +22,9 @@ namespace DevJAD {
         }
         this->data->window.setFramerateLimit(60);
         this->data->screenType = screen_type;
+        //this->data->machine.AddState(StateRef(new MainMenuState(this->data)));
+        //this->data->machine.AddState(StateRef(new SeaGameState(this->data)));
+        //this->data->machine.AddState(StateRef(new TestState(this->data)));
         this->data->machine.AddState(StateRef(new SplashState(this->data)));
         //this->data->machine.AddState(StateRef(new GameOverState(this->data)));
         this->Run();

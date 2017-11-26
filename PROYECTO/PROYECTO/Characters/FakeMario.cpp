@@ -11,6 +11,9 @@
 namespace DevJAD {
     FakeMario::FakeMario(GameDataRef _data): data(_data){
         this->fakeMarioTexture = this->data->assets.GetTexture("character 02");
+        this->shot.setTexture(this->fakeMarioTexture);
+        this->shot.setTextureRect(sf::IntRect(0, 175, 110, 90));
+        
         this->fakeMarioTexture.setSmooth(true);
         this->fakeMarioSprite.setTexture(this->fakeMarioTexture);
         this->fakeMarioSprite.setTextureRect(sf::IntRect(0,0, 110, 85));
@@ -24,10 +27,16 @@ namespace DevJAD {
         this->movementX = 0;
         this->movementY = 0;
         this->timeAttack = 0;
+        this->framesShotInterator = 0;
     }
     
     void FakeMario::Draw(){
         this->data->window.draw(this->fakeMarioSprite);
+        
+        this->shot.setPosition(this->fakeMarioSprite.getPosition().x, this->fakeMarioSprite.getPosition().y + 100);
+        for(int i = 0; i< this->shots.size(); i++){
+            this->data->window.draw(this->shots.at(i));
+        }
         // Show collision border
         /*
         sf::RectangleShape border;
@@ -38,26 +47,46 @@ namespace DevJAD {
     }
     
     void FakeMario::Animate(float dt){
-        if(this->clock.getElapsedTime().asSeconds() > 0.1f){
-            if(this->state != IS_ATTACKING){
+        
+        if(framesShotInterator > 8){
+            framesShotInterator = 0;
+        }else
+            framesShotInterator++;
+        
+        for(int i = 0; i < this->shots.size(); i++){
+            this->shots.at(i).move(500*dt, 0);
+            this->shots.at(i).setTextureRect(sf::IntRect(this->framesInterator * 110, 175, 110, 90));
+        }
+        
+        
+        if(this->state == IS_ATTACKING){
+            
+            if(this->timeAttack > 9.5){
+                this->shot.setPosition(this->fakeMarioSprite.getPosition().x + this->fakeMarioSprite.getGlobalBounds().width / 2, this->fakeMarioSprite.getPosition().y);
+                this->shots.push_back(this->shot);
+            }
+            
+             if(this->clock.getElapsedTime().asSeconds() > 0.07f){
+                 this->timeAttack = this->timeAttack > 0 ? this->timeAttack : 19.0;
+                 if(framesInterator > 19){
+                     framesInterator = 0;
+                 }else
+                     framesInterator++;
+                 this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 85, 110, 87));
+                 this->timeAttack--;
+                 this->clock.restart();
+             }
+        }else{
+            if(this->clock.getElapsedTime().asSeconds() > 0.1f){
                 if(framesInterator > 10){
                     framesInterator = 0;
                 }else
                     framesInterator++;
                 this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 0, 110, 85));
-            }else{
-                this->timeAttack = this->timeAttack > 0 ? this->timeAttack : 19.0;
-                if(framesInterator > 19){
-                    framesInterator = 0;
-                }else
-                    framesInterator++;
-                std::cout << "Intervalo " << this->timeAttack  << std::endl;
-                this->fakeMarioSprite.setTextureRect(sf::IntRect(framesInterator * 110, 85, 110, 87));
-                this->timeAttack--;
+                this->clock.restart();
             }
-            
-            this->clock.restart();
         }
+        
     }
     
     const sf::Sprite &FakeMario::GetSprite() const{

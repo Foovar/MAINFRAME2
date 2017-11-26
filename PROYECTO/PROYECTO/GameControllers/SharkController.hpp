@@ -31,6 +31,7 @@ namespace DevJAD {
         void SpawnSharks();
         bool IsCollide(int i, sf::Sprite sprite);
         void SetSharkState(int shark, int state);
+        int GetSharkState(int shark);
         void SetScale(float x, float y);
         const std::vector<SharkEntity> &GetEntities() const;
     };

@@ -13,16 +13,18 @@
 #include <SFML/Graphics.hpp>
 #include "Game.hpp"
 #include "Constants.hpp"
-
 namespace DevJAD {
     class FakeMario {
         GameDataRef data;
         std::vector<sf::Sprite> animationFrames;
+        std::vector<sf::Sprite> shots;
+        
         sf::Sprite fakeMarioSprite;
         sf::Texture fakeMarioTexture;
         sf::Clock clock;
+        sf::Sprite shot;
         int state, movementX, movementY;
-        unsigned int framesInterator;
+        unsigned int framesInterator, framesShotInterator;
         float timeAttack;
         
     public:

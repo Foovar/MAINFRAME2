@@ -12,12 +12,15 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
-#include "Tarzan.hpp"
 #include "Collision.hpp"
 #include "SharkController.hpp"
 #include "Flash.hpp"
 #include "GameOverState.hpp"
 #include "FakeMario.hpp"
+#include "Constants.hpp"
+#include <sstream>
+#include "ShotEntity.hpp"
+#include "MarioCharacter.hpp"
 
 namespace DevJAD {
     
@@ -30,8 +33,9 @@ namespace DevJAD {
         sf::Sprite coral;
         sf::View viewScreen;
         Collision collision;
-        Tarzan *  tarzan;
         FakeMario * fakeMario;
+        ShotEntity * shotEntity;
+        MarioCharacter * marioCharacter;
         
         SharkController * sharks;
         float maxDuration;

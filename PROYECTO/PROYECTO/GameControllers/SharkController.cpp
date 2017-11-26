@@ -69,6 +69,9 @@ namespace DevJAD {
     void SharkController::SetSharkState(int shark, int state){
         this->sharks.at(shark).SetState(state);
     }
+    int SharkController::GetSharkState(int shark){
+        return this->sharks.at(shark).GetState();
+    }
     
     void SharkController::SetScale(float x, float y){
         this->scale = sf::Vector2f(x, y);
