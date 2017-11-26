@@ -69,9 +69,10 @@ namespace DevJAD {
     }
     
     void SeaGameState::Update(float dt){
-        
-        this->marioCharacter->Update(dt);
-        this->marioCharacter->Animate(dt);
+        if(this->marioCharacter->GetState() != CHARACTER_STATE_DEAD){
+            this->marioCharacter->Update(dt);
+            this->marioCharacter->Animate(dt);
+        }
         
         if(this->gameState != IS_GAME_OVER){
             

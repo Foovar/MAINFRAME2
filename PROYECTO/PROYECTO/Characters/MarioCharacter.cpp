@@ -39,29 +39,28 @@ namespace DevJAD {
     }
     
     void MarioCharacter::Animate(float dt){
-        if(CHARACTER_STATE_DEAD != this->characterStatus) {
-            if(this->clock.getElapsedTime().asSeconds() > this->switchTime){
-                this->spriteCharacter.setTextureRect(sf::IntRect(this->frameInterator * 110, this->framePosY, 110, 90));
-                
-                if(this->characterStatus == CHARACTER_STATE_ATTACK && this->frameInterator > this->totalFrames / 3){
-                    this->shotEntity->Shoot(this->spriteCharacter.getPosition());
-                }
-                
-                if(this->frameInterator >= this->totalFrames - 1){
-                    this->frameInterator = 0;
-                    if(this->characterStatus == CHARACTER_STATE_ATTACK)
-                        this->attackCompleted = true;
-                }else this->frameInterator++;
-                
-                this->clock.restart();
+        if(this->clock.getElapsedTime().asSeconds() > this->switchTime){
+            this->spriteCharacter.setTextureRect(sf::IntRect(this->frameInterator * 110, this->framePosY, 110, 90));
+            
+            if(this->characterStatus == CHARACTER_STATE_ATTACK && this->frameInterator > this->totalFrames / 3){
+                this->shotEntity->Shoot(this->spriteCharacter.getPosition());
             }
+            
+            if(this->frameInterator >= this->totalFrames - 1){
+                this->frameInterator = 0;
+                if(this->characterStatus == CHARACTER_STATE_ATTACK)
+                    this->attackCompleted = true;
+            }else this->frameInterator++;
+            
+            this->clock.restart();
         }
     }
     
     void MarioCharacter::Update(float dt){
-        // if not dead
-        this->shotEntity->Animate(dt);
-        this->shotEntity->Update(dt);
+        if(this->characterStatus != CHARACTER_STATE_DEAD){
+            this->shotEntity->Animate(dt);
+            this->shotEntity->Update(dt);
+        
         
         switch (this->characterStatus) {
             case CHARACTER_STATE_SWIM:
@@ -121,7 +120,7 @@ namespace DevJAD {
         }
         
         this->spriteCharacter.setPosition(this->data->window.getView().getCenter().x + this->movementX, (this->data->window.getSize().y - this->data->window.getSize().y/4) + this->movementY );
-        
+        }
     }
     
     void MarioCharacter::SetDefaultState(int state){
