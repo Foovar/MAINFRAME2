@@ -16,7 +16,9 @@ namespace DevJAD {
         this->movementX = 0;
         this->movementY = 0;
         this->switchTime = 0.08;
-        this->spriteCharacter.setTexture(this->data->assets.GetTexture("character 02"));
+        sf::Texture * marioTexture = new sf::Texture(this->data->assets.GetTexture("character 02"));
+        marioTexture->setSmooth(true);
+        this->spriteCharacter.setTexture(*marioTexture);
         this->spriteCharacter.setTextureRect(sf::IntRect(0, 0, 0, 0));
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
             this->spriteCharacter.setScale(0.5, 0.5);
