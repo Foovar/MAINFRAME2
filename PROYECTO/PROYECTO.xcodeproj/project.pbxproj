@@ -32,8 +32,8 @@
 		FAAAE4131FB37FF900EDA356 /* SharkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE4111FB37FF900EDA356 /* SharkController.cpp */; };
 		FAB180F01FA450CD00189F56 /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EB1FA450CD00189F56 /* libsfml-audio.2.4.2.dylib */; };
 		FAB180F11FA450CD00189F56 /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EC1FA450CD00189F56 /* libsfml-window.2.4.2.dylib */; };
-		FAB180F21FA450CD00189F56 /* libsfml-network.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180ED1FA450CD00189F56 /* libsfml-network.2.4.2.dylib */; };
-		FAB180F31FA450CD00189F56 /* libsfml-graphics.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EE1FA450CD00189F56 /* libsfml-graphics.2.4.2.dylib */; };
+		FAB180F21FA450CD00189F56 /* libsfml-network.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180ED1FA450CD00189F56 /* libsfml-network.2.4.2.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FAB180F31FA450CD00189F56 /* libsfml-graphics.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EE1FA450CD00189F56 /* libsfml-graphics.2.4.2.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		FAB180F41FA450CD00189F56 /* libsfml-system.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EF1FA450CD00189F56 /* libsfml-system.2.4.2.dylib */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +62,13 @@
 /* Begin PBXFileReference section */
 		FA0E3EAE1FB0228D00A5ABDA /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		FA0E3EAF1FB0228D00A5ABDA /* Collision.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
+		FA26B75E1FCF54E80076DBF1 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = SFML/Frameworks; sourceTree = "<group>"; };
+		FA26B7601FCF55050076DBF1 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "SFML/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		FA26B7611FCF55050076DBF1 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "SFML/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
+		FA26B7621FCF55050076DBF1 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "SFML/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		FA26B7631FCF55050076DBF1 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "SFML/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		FA26B7641FCF55050076DBF1 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = SFML/Frameworks/SFML.framework; sourceTree = "<group>"; };
+		FA26B7651FCF55050076DBF1 /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "SFML/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
 		FA3878B81FAD7DED002E2541 /* Tarzan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tarzan.cpp; sourceTree = "<group>"; };
 		FA3878B91FAD7DED002E2541 /* Tarzan.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tarzan.hpp; sourceTree = "<group>"; };
 		FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeaGameState.cpp; sourceTree = "<group>"; };
@@ -237,6 +244,13 @@
 		FAB180EA1FA450CD00189F56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA26B7651FCF55050076DBF1 /* sfml-audio.framework */,
+				FA26B7621FCF55050076DBF1 /* sfml-graphics.framework */,
+				FA26B7611FCF55050076DBF1 /* sfml-network.framework */,
+				FA26B7631FCF55050076DBF1 /* sfml-system.framework */,
+				FA26B7601FCF55050076DBF1 /* sfml-window.framework */,
+				FA26B7641FCF55050076DBF1 /* SFML.framework */,
+				FA26B75E1FCF54E80076DBF1 /* Frameworks */,
 				FAB180EB1FA450CD00189F56 /* libsfml-audio.2.4.2.dylib */,
 				FAB180EE1FA450CD00189F56 /* libsfml-graphics.2.4.2.dylib */,
 				FAB180ED1FA450CD00189F56 /* libsfml-network.2.4.2.dylib */,
@@ -440,7 +454,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ZJ7QEY8KP;
-				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/SFML/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"${SRCROOT}/SFML/Frameworks",
+					"$(PROJECT_DIR)/SFML/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = "${SRCROOT}/SFML/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +472,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ZJ7QEY8KP;
-				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/SFML/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"${SRCROOT}/SFML/Frameworks",
+					"$(PROJECT_DIR)/SFML/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = "${SRCROOT}/SFML/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

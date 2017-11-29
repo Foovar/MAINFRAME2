@@ -27,6 +27,18 @@ namespace DevJAD {
         this->background.setTexture(this->data->assets.GetTexture("main background"));
         this->title.setTexture(this->data->assets.GetTexture("main title"));
         
+        
+       /* sf::Music music;
+        music.openFromFile("Assets/sounds/main-sound.ogg");
+        music.play();*/
+        
+        sf::SoundBuffer buffer;
+        buffer.loadFromFile("Assets/sounds/main-sound.wav");
+        sf::Sound sound;
+        sound.setBuffer(buffer);
+        sound.setVolume(50);
+         sound.play();
+        
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
             this->background.setScale(0.9, 0.9);
             this->title.setScale(0.5, 0.5);
