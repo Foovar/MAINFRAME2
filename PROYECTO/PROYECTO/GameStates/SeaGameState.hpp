@@ -21,6 +21,7 @@
 #include <sstream>
 #include "ShotEntity.hpp"
 #include "MarioCharacter.hpp"
+#include "ScoreBar.hpp"
 
 namespace DevJAD {
     
@@ -33,9 +34,13 @@ namespace DevJAD {
         sf::Sprite coral;
         sf::View viewScreen;
         Collision collision;
-        FakeMario * fakeMario;
         ShotEntity * shotEntity;
         MarioCharacter * marioCharacter;
+        ScoreBar * score;
+        
+        
+        sf::Font fontPoints;
+        std::vector<sf::Text> textPoints;
         
         SharkController * sharks;
         float maxDuration;

@@ -12,7 +12,7 @@
 
 namespace DevJAD {
     
-    GameOverState::GameOverState(GameDataRef data){
+    GameOverState::GameOverState(GameDataRef data, int score){
         this->data = data;
     }
     

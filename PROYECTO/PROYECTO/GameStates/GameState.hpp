@@ -13,14 +13,19 @@
 #include "State.hpp"
 #include "Game.hpp"
 #include "Tarzan.hpp"
+#include <vector>
+#include "iostream"
+#include "LianaController.hpp"
 
 namespace DevJAD {
     
     class GameState : public State {
         GameDataRef data;
+        std::vector<sf::Sprite> backgroundChange;
         sf::Clock clock;
-        sf::Sprite background;
-        Tarzan * tarzan;
+        sf::View viewScreen;
+        float backgrounSize, viewAccum;
+        LianaController * lianas;
         
     public:
         GameState(GameDataRef data);

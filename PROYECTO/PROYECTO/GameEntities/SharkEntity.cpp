@@ -40,7 +40,7 @@ namespace DevJAD {
             this->entitySprite = this->GetCurrentAnimationData()->sprite;
             this->entitySprite.setTextureRect(this->entityRect);
             if(SHARK_DIE != this->entityState)
-                this->entitySprite.move(0, cos(this->clockSin.getElapsedTime().asSeconds()) * 18);
+                this->entitySprite.move(0, cos(this->clockSin.getElapsedTime().asSeconds()) * 17);
             else{
                 this->die->sprite.move(0, -(dt * 220.0));
             }
@@ -49,7 +49,9 @@ namespace DevJAD {
     }
     
     void SharkEntity::Move(float x, float y){
-        
+        this->attack->sprite.move(x, y);
+        this->swimming->sprite.move(x, y);
+        this->die->sprite.move(x, y);
     }
     
     void SharkEntity::SetPosition(float x, float y){

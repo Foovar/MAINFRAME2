@@ -25,7 +25,7 @@ namespace DevJAD {
         sf::Sprite buttonExit;
         
     public:
-        GameOverState(GameDataRef data);
+        GameOverState(GameDataRef data, int score = 0);
         void Init();
         void HandleInput();
         void Update(float dt);

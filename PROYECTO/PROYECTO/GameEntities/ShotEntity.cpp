@@ -19,7 +19,7 @@ namespace DevJAD {
         this->shotSprite.setTexture(this->data->assets.GetTexture("character 02"));
         this->shotSprite.setTextureRect(sf::IntRect(0, 0, 0, 0));
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
-            this->shotSprite.setScale(0.6f, 0.6f);
+            this->shotSprite.setScale(0.7f, 0.7f);
     }
     
     void ShotEntity::Draw(){
@@ -39,7 +39,10 @@ namespace DevJAD {
                 }else this->frameInterator++;
                 this->clock.restart();
             }
-            this->shotSprite.move(dt * 300, 0);
+            if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
+                this->shotSprite.move(dt * 300, 0);
+            else
+                this->shotSprite.move(dt * 600, 0);
         }
     }
     void ShotEntity::Update(float dt){

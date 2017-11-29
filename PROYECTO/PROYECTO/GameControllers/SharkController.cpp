@@ -22,7 +22,10 @@ namespace DevJAD {
            sharkEntity = new SharkEntity(this->data->assets.GetTexture("shark"), sf::Vector2f(0.4,0.4));
         }
         int min = this->data->window.getSize().y / 2;
-        int randomPosition = rand() % ((this->data->window.getSize().y - 100) - min + 1) + min;
+        int randomPosition = rand() % ((this->data->window.getSize().y - 70) - min + 1) + min;
+        randomPosition = rand() % ((this->data->window.getSize().y - 70) - min + 1) + min;
+        randomPosition = rand() % ((this->data->window.getSize().y - 70) - min + 1) + min;
+        
         sharkEntity->SetPosition(this->data->window.getView().getCenter().x + (this->data->window.getView().getSize().x/2), randomPosition);
         this->sharks.push_back(*sharkEntity);
     }
@@ -39,9 +42,11 @@ namespace DevJAD {
     }
     
     void SharkController::MoveSharks(float dt){
-        for (unsigned short int i = 0; i < this->sharks.size(); i++) {
-            //this->sharks.at(i).Move(-(dt * 200), 0);
-        }
+        
+    }
+    
+    void SharkController::MoveShark(int i, float x, float y){
+        this->sharks.at(i).Move(x, y);
     }
     
     void SharkController::DrawSharks(){

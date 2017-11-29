@@ -102,6 +102,7 @@ namespace DevJAD {
                 //this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
             }else if(this->data->input.IsSpriteClicked(this->menuItemStart, sf::Mouse::Button::Left, this->data->window)){
                 this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
+                //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
             }
         }
     }

@@ -13,6 +13,8 @@
 		FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412E91FAAFACF00E5E3A0 /* Game.cpp */; };
 		FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412ED1FAAFF7100E5E3A0 /* SplashState.cpp */; };
 		FA4412F21FABF69200E5E3A0 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412F01FABF69200E5E3A0 /* MainMenuState.cpp */; };
+		FA4DE16C1FCB67100013F028 /* LianaEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4DE16A1FCB67100013F028 /* LianaEntity.cpp */; };
+		FA4DE16F1FCB7BFC0013F028 /* LianaController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */; };
 		FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC931FAAD40E00EEF301 /* main.cpp */; };
 		FA52DC981FAAD4A700EEF301 /* Assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA52DC961FAAD48B00EEF301 /* Assets */; };
 		FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC9B1FAADDAE00EEF301 /* StateMachine.cpp */; };
@@ -22,6 +24,7 @@
 		FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120631FCA676A00EE1482 /* ShotEntity.cpp */; };
 		FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120661FCA7BF600EE1482 /* TestState.cpp */; };
 		FA61206B1FCA8DB900EE1482 /* MarioCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6120691FCA8DB900EE1482 /* MarioCharacter.cpp */; };
+		FA61206E1FCB464500EE1482 /* ScoreBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA61206C1FCB464500EE1482 /* ScoreBar.cpp */; };
 		FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CDF1FAC33DB0064545E /* GameState.cpp */; };
 		FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CE21FAC3D220064545E /* GameOverState.cpp */; };
 		FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA822D21FB90C5F0077B7B5 /* Flash.cpp */; };
@@ -69,6 +72,10 @@
 		FA4412EE1FAAFF7100E5E3A0 /* SplashState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SplashState.hpp; sourceTree = "<group>"; };
 		FA4412F01FABF69200E5E3A0 /* MainMenuState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
 		FA4412F11FABF69200E5E3A0 /* MainMenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenuState.hpp; sourceTree = "<group>"; };
+		FA4DE16A1FCB67100013F028 /* LianaEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LianaEntity.cpp; sourceTree = "<group>"; };
+		FA4DE16B1FCB67100013F028 /* LianaEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LianaEntity.hpp; sourceTree = "<group>"; };
+		FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LianaController.cpp; sourceTree = "<group>"; };
+		FA4DE16E1FCB7BFC0013F028 /* LianaController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LianaController.hpp; sourceTree = "<group>"; };
 		FA52DC931FAAD40E00EEF301 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FA52DC961FAAD48B00EEF301 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		FA52DC991FAAD58700EEF301 /* Constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
@@ -88,6 +95,8 @@
 		FA6120671FCA7BF600EE1482 /* TestState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestState.hpp; sourceTree = "<group>"; };
 		FA6120691FCA8DB900EE1482 /* MarioCharacter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MarioCharacter.cpp; sourceTree = "<group>"; };
 		FA61206A1FCA8DB900EE1482 /* MarioCharacter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MarioCharacter.hpp; sourceTree = "<group>"; };
+		FA61206C1FCB464500EE1482 /* ScoreBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ScoreBar.cpp; sourceTree = "<group>"; };
+		FA61206D1FCB464500EE1482 /* ScoreBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ScoreBar.hpp; sourceTree = "<group>"; };
 		FA7C6CDF1FAC33DB0064545E /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		FA7C6CE01FAC33DB0064545E /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		FA7C6CE21FAC3D220064545E /* GameOverState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
@@ -161,6 +170,8 @@
 				FAAAE40E1FB37B4A00EDA356 /* SharkEntity.hpp */,
 				FA6120631FCA676A00EE1482 /* ShotEntity.cpp */,
 				FA6120641FCA676A00EE1482 /* ShotEntity.hpp */,
+				FA4DE16A1FCB67100013F028 /* LianaEntity.cpp */,
+				FA4DE16B1FCB67100013F028 /* LianaEntity.hpp */,
 			);
 			path = GameEntities;
 			sourceTree = "<group>";
@@ -170,6 +181,8 @@
 			children = (
 				FAAAE4111FB37FF900EDA356 /* SharkController.cpp */,
 				FAAAE4121FB37FF900EDA356 /* SharkController.hpp */,
+				FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */,
+				FA4DE16E1FCB7BFC0013F028 /* LianaController.hpp */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -215,6 +228,8 @@
 				FAA822D21FB90C5F0077B7B5 /* Flash.cpp */,
 				FAA822D31FB90C5F0077B7B5 /* Flash.hpp */,
 				FA5B8AB91FC9322D007F5C4F /* Utils.hpp */,
+				FA61206C1FCB464500EE1482 /* ScoreBar.cpp */,
+				FA61206D1FCB464500EE1482 /* ScoreBar.hpp */,
 			);
 			path = PROYECTO;
 			sourceTree = "<group>";
@@ -294,6 +309,7 @@
 				FA52DCA31FAAF79700EEF301 /* InputManager.cpp in Sources */,
 				FA0E3EB01FB0228D00A5ABDA /* Collision.cpp in Sources */,
 				FAAAE4131FB37FF900EDA356 /* SharkController.cpp in Sources */,
+				FA4DE16F1FCB7BFC0013F028 /* LianaController.cpp in Sources */,
 				FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */,
 				FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */,
 				FA3878BA1FAD7DED002E2541 /* Tarzan.cpp in Sources */,
@@ -305,8 +321,10 @@
 				FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */,
 				FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */,
 				FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */,
+				FA4DE16C1FCB67100013F028 /* LianaEntity.cpp in Sources */,
 				FA5B8ABC1FC94D1A007F5C4F /* FakeMario.cpp in Sources */,
 				FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */,
+				FA61206E1FCB464500EE1482 /* ScoreBar.cpp in Sources */,
 				FAAAE40F1FB37B4A00EDA356 /* SharkEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

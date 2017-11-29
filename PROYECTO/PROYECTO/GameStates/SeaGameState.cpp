@@ -15,6 +15,7 @@ namespace DevJAD {
         this->viewScreen = sf::View(this->data->window.getDefaultView());
         this->maxDuration = this->viewScreen.getSize().x;
         this->gameState = IS_PLAYING;
+        this->fontPoints.loadFromFile("Assets/fonts/display.ttf");
     }
     
     void SeaGameState::Init(){
@@ -31,6 +32,7 @@ namespace DevJAD {
         
         this->sharks = new SharkController(this->data);
         this->flash = new Flash(this->data, this->background.getGlobalBounds().width, this->data->window.getSize().y);
+        this->score = new ScoreBar(this->data);
         
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
             this->background.setScale(this->background.getScale().x, 0.6);
@@ -77,13 +79,6 @@ namespace DevJAD {
         if(this->gameState != IS_GAME_OVER){
             
             std::vector<SharkEntity> sharkEntities = this->sharks->GetEntities();
-            for(unsigned short int i = 0; i< sharkEntities.size(); i++){
-                if(!this->marioCharacter->hasShoot()){
-                    if(this->collision.CheckSpriteCollision(this->marioCharacter->GetShootSprite(), sharkEntities.at(i).GetSprite())){
-                        this->sharks->SetSharkState(i, SHARK_DIE);
-                    }
-                }
-            }
             
             for(unsigned short int i = 0; i< sharkEntities.size(); i++){
                 if(this->sharks->GetSharkState(i) != SHARK_DIE){
@@ -92,6 +87,7 @@ namespace DevJAD {
                     sharkRect.left -= 100;
                     if(this->collision.CheckRectCollision(sharkRect, this->marioCharacter->GetSprite().getGlobalBounds() )){
                         this->sharks->SetSharkState(i, SHARK_ATTACK);
+                        this->sharks->MoveShark(i, -(dt * 130), 0);
                     }else this->sharks->SetSharkState(i, SHARK_SWIMMING);
                     
                     if(this->collision.CheckSpriteCollision(sharkEntities.at(i).GetSprite(), this->marioCharacter->GetSprite(), 20, 20, 30, 20 )){
@@ -103,6 +99,34 @@ namespace DevJAD {
                 }
             }
             
+            for(unsigned short int i = 0; i< sharkEntities.size(); i++){
+                if(!this->marioCharacter->hasShoot() && this->sharks->GetSharkState(i) != SHARK_DIE){
+                    if(this->collision.CheckSpriteCollision(this->marioCharacter->GetShootSprite(), sharkEntities.at(i).GetSprite())){
+                        this->sharks->SetSharkState(i, SHARK_DIE);
+                        
+                        sf::Vector2f a = sf::Vector2f(this->marioCharacter->GetShootSprite().getPosition().x + this->marioCharacter->GetShootSprite().getGlobalBounds().width, this->marioCharacter->GetShootSprite().getPosition().y + this->marioCharacter->GetShootSprite().getGlobalBounds().height);
+                        
+                        sf::Vector2f b = sharkEntities.at(i).GetSprite().getPosition();
+                        int points = (int) (50 + ((a.x - b.x) * (a.y - b.y)));
+                        points > 300 && ( points = 300 );
+                        sf::Text text(std::to_string((int)(points/2) ) , this->fontPoints);
+                        this->score->AddScore((int)(points/2) );
+                        
+                        text.setCharacterSize(35);
+                        text.setStyle(sf::Text::Bold);
+                        text.setPosition( sharkEntities.at(i).GetSprite().getPosition() );
+                        this->textPoints.push_back(text);
+                    }
+                }
+            }
+            
+            for(unsigned int i = 0; i < this->textPoints.size(); i++){
+                if(this->textPoints.at(i).getFillColor().a > 0)
+                    this->textPoints.at(i).setFillColor(sf::Color(255, 255, 255, this->textPoints.at(i).getFillColor().a - 5 ));
+                else
+                    this->textPoints.erase(this->textPoints.begin() + i );
+            }
+            
             int maxDuration = this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM ? 100 : 200;
             this->sharks->UpdateSharks(dt);
             
@@ -112,6 +136,7 @@ namespace DevJAD {
                     this->maxDuration+=dt*maxDuration;
                 }else{
                     this->flash->Show(dt);
+                    //this->gameState = IS_GAME_OVER;
                 } // level terminado -> pasar al siguiente nivel.
                 this->clock.restart();
             }
@@ -123,7 +148,7 @@ namespace DevJAD {
                 }
             }
             
-            if(clockSpawn.getElapsedTime().asSeconds() > 1.5){
+            if(clockSpawn.getElapsedTime().asSeconds() > 1){
                 this->sharks->SpawnSharks();
                 clockSpawn.restart();
             }
@@ -144,6 +169,10 @@ namespace DevJAD {
         this->data->window.draw(this->coral);
         this->sharks->DrawSharks();
         this->marioCharacter->Draw();
+        for(int i = 0; i < this->textPoints.size(); i++){
+            this->data->window.draw(this->textPoints.at(i));
+        }
+        this->score->Draw();
         this->flash->Draw();
         this->data->window.display();
     }

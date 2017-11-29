@@ -56,6 +56,8 @@
 #define CHARACTER_MOVE_SPEED 450.f
 // ESCENARIOS
 
+#define SCOREBAR_FILEPATH "Assets/images/scorebar.png"
+#define SCOREBAR_FONT_FILEPATH "Assets/fonts/display.ttf"
 // splash
 #define SPASH_BACKGROUND_FILEPATH ""
 #define SPLASH_EXTRA_FILEPATH "Assets/images/extra_splash.png"
@@ -66,6 +68,9 @@
 #define MAIN_BACKGROUND_FILEPATH "Assets/images/main_background.jpg"
 #define MAIN_MENU_FILEPATH "Assets/images/main_menu_sprite.png"
 #define MAIN_TITLE_FILEPATH "Assets/images/main_title.png"
+
+// forest
+#define FOREST_BACKGROUND_FILEPATH "Assets/images/forest_background.jpg"
 
 // sea
 #define SEA_BACKGROUND_FILEPATH "Assets/images/sea_background.png"

@@ -26,6 +26,7 @@ namespace DevJAD {
     public:
         SharkController(GameDataRef data);
         void MoveSharks(float dt);
+        void MoveShark(int i, float x, float y);
         void UpdateSharks(float dt);
         void DrawSharks();
         void SpawnSharks();

@@ -21,7 +21,10 @@ namespace DevJAD {
         this->spriteCharacter.setTexture(*marioTexture);
         this->spriteCharacter.setTextureRect(sf::IntRect(0, 0, 0, 0));
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
-            this->spriteCharacter.setScale(0.5, 0.5);
+            this->spriteCharacter.setScale(0.7, 0.7);
+        else
+            this->spriteCharacter.setScale(1.3, 1.3);
+        
         this->totalFrames = 12;
         this->attackCompleted = false;
         this->shotEntity = new ShotEntity(this->data);

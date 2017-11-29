@@ -22,6 +22,11 @@ namespace DevJAD {
         this->data->assets.LoadTexture("splash_logo", SPLASH_LOGO_FILEPATH);
         this->data->assets.LoadTexture("splash_extra", SPLASH_EXTRA_FILEPATH);
         this->data->assets.LoadTexture("sea background", SEA_BACKGROUND_FILEPATH);
+        this->data->assets.LoadTexture("scorebar", SCOREBAR_FILEPATH);
+        this->data->assets.LoadFont("display", SCOREBAR_FONT_FILEPATH);
+        this->data->assets.LoadTexture("forest background", FOREST_BACKGROUND_FILEPATH);
+        
+        
         this->logo.setTexture(this->data->assets.GetTexture("splash_logo"));
         this->extra.setTexture(this->data->assets.GetTexture("splash_extra"));
         this->extra.setPosition(sf::Vector2f(this->data->window.getSize().x / 2 - this->extra.getGlobalBounds().width/2, -120));
