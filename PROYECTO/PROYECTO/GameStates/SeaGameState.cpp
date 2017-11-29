@@ -23,6 +23,7 @@ namespace DevJAD {
         this->data->assets.LoadTexture("character 02", GAME_CHARACTER02_PATH);
         this->data->assets.LoadTexture("shark", SHARK_FILEPATH);
         this->data->assets.LoadTexture("sea coral", SEA_CORAL_FILEPATH);
+        this->soundBackground.setBuffer(this->data->assets.GetSoundBuffer("sea background sound"));
         
         this->background.setTexture(this->data->assets.GetTexture("sea background"));
         this->coral.setTexture(this->data->assets.GetTexture("sea coral"));
@@ -40,6 +41,7 @@ namespace DevJAD {
             this->sharks->SetScale(0.5, 0.5);
         }
         this->coral.setPosition(0, this->background.getGlobalBounds().height - this->coral.getGlobalBounds().height);
+        this->soundBackground.play();
     }
     
     void SeaGameState::HandleInput(){
@@ -94,6 +96,7 @@ namespace DevJAD {
                         this->sharks->SetSharkState(i, SHARK_ATTACK);
                         this->marioCharacter->SetState(CHARACTER_STATE_DEAD);
                         this->gameState = IS_GAME_OVER;
+                        this->soundBackground.stop();
                         this->clock.restart();
                     }
                 }

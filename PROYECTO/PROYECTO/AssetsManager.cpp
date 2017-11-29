@@ -32,18 +32,6 @@ namespace DevJAD {
         return this->fonts.at(name);
     }
     
-    void AssetsManager::LoadSound(std::string name, std::string filename){
-        sf::SoundBuffer buffer;
-        sf::Sound sound;
-        if(buffer.loadFromFile(filename)){
-            this->sounds[name] = sf::Sound(buffer);
-        }
-    }
-    
-    sf::Sound &AssetsManager::GetSound(std::string name){
-        return this->sounds.at(name);
-    }
-    
     void AssetsManager::LoadSoundBuffer(std::string name, std::string filename){
         sf::SoundBuffer buffer;
         if(buffer.loadFromFile(filename)){

@@ -19,7 +19,6 @@ namespace DevJAD {
     class AssetsManager{
         std::map<std::string, sf::Texture> textures;
         std::map<std::string, sf::Font> fonts;
-        std::map<std::string, sf::Sound> sounds;
         std::map<std::string, sf::SoundBuffer> soundsBuffer;
         
     public:
@@ -31,9 +30,6 @@ namespace DevJAD {
         
         void LoadFont(std::string name, std::string filename);
         sf::Font &GetFont(std::string name);
-        
-        void LoadSound(std::string name, std::string filename);
-        sf::Sound &GetSound(std::string name);
         
         void LoadSoundBuffer(std::string name, std::string filename);
         sf::SoundBuffer &GetSoundBuffer(std::string name);

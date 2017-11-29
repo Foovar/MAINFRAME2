@@ -26,18 +26,11 @@ namespace DevJAD {
         this->menu.setTexture(this->data->assets.GetTexture("main menu"));
         this->background.setTexture(this->data->assets.GetTexture("main background"));
         this->title.setTexture(this->data->assets.GetTexture("main title"));
-        
-        
-       /* sf::Music music;
-        music.openFromFile("Assets/sounds/main-sound.ogg");
-        music.play();*/
-        
-        sf::SoundBuffer buffer;
-        buffer.loadFromFile("Assets/sounds/main-sound.wav");
-        sf::Sound sound;
-        sound.setBuffer(buffer);
-        sound.setVolume(50);
-         sound.play();
+        this->soundBackground.setBuffer(this->data->assets.GetSoundBuffer("main sound"));
+        this->soundClick.setBuffer(this->data->assets.GetSoundBuffer("main click"));
+        this->soundHover.setBuffer(this->data->assets.GetSoundBuffer("main hover"));
+        this->soundBackground.setLoop(true);
+        this->soundBackground.play();
         
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
             this->background.setScale(0.9, 0.9);
@@ -54,7 +47,7 @@ namespace DevJAD {
         
         this->title.setPosition(getCenterPosition(this->data->window.getSize(), this->title.getGlobalBounds()));
         this->title.setPosition(sf::Vector2f(this->title.getPosition().x, this->title.getPosition().y - this->menu.getGlobalBounds().height/4) );
-        
+        this->ResetHover();
     }
     
     void MainMenuState::CreateMenu(){
@@ -82,7 +75,12 @@ namespace DevJAD {
         this->menuItemQuit.setTextureRect(sf::IntRect(0, 20+90+95+86, menuSize.x, 120));
         this->menuItemQuit.setPosition(this->menuItemCredits.getPosition().x, this->menuItemCredits.getPosition().y + this->menuItemCredits.getGlobalBounds().height);
     }
-    
+    void MainMenuState::ResetHover(){
+        this->startHover = false;
+        this->quitHover = false;
+        this->optionsHover = false;
+        this->creditsHover = false;
+    }
     void MainMenuState::HandleInput(){
         sf::Event event;
         sf::Vector2i mpos;
@@ -96,23 +94,41 @@ namespace DevJAD {
             if(sf::Event::MouseMoved == event.type){
                 this->CreateMenu();
                 if(this->data->input.IsSpriteHover(this->menuItemStart, this->data->window)){
+                    if(!this->startHover)
+                        this->soundHover.play();
+                    this->ResetHover();
+                    this->startHover = true;
                     this->menuItemStart.setTextureRect(sf::IntRect(0, 20 + menuSize.y / 2, menuSize.x, 90));
                 }else if(this->data->input.IsSpriteHover(this->menuItemOptions, this->data->window)){
+                    if(!this->optionsHover)
+                        this->soundHover.play();
+                    this->ResetHover();
+                    this->optionsHover = true;
                     this->menuItemOptions.setTextureRect(sf::IntRect(0, 20+90+ menuSize.y / 2, menuSize.x, 95));
                 }else if(this->data->input.IsSpriteHover(this->menuItemCredits, this->data->window)){
+                    if(!this->creditsHover)
+                        this->soundHover.play();
+                    this->ResetHover();
+                    this->creditsHover = true;
                     this->menuItemCredits.setTextureRect(sf::IntRect(0, 20+90+95+ menuSize.y / 2, menuSize.x, 86));
                 }else if(this->data->input.IsSpriteHover(this->menuItemQuit, this->data->window)){
+                    if(!this->quitHover)
+                        this->soundHover.play();
+                    this->ResetHover();
+                    this->quitHover = true;
                     this->menuItemQuit.setTextureRect(sf::IntRect(0, 20+90+95+86+ menuSize.y / 2, menuSize.x, 120));
                 }
-                
-                
             }
             
             if(this->data->input.IsSpriteClicked(this->menuItemQuit, sf::Mouse::Button::Left, this->data->window)){
                 this->data->window.close();
+                this->soundClick.play();
                 //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
                 //this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
             }else if(this->data->input.IsSpriteClicked(this->menuItemStart, sf::Mouse::Button::Left, this->data->window)){
+                this->soundClick.play();
+                this->soundBackground.setLoop(false);
+                this->soundBackground.stop();
                 this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
                 //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
             }

@@ -68,13 +68,16 @@
 #define MAIN_BACKGROUND_FILEPATH "Assets/images/main_background.jpg"
 #define MAIN_MENU_FILEPATH "Assets/images/main_menu_sprite.png"
 #define MAIN_TITLE_FILEPATH "Assets/images/main_title.png"
-
+#define MAIN_SOUND_BACKGROUND "Assets/sounds/main-sound.wav"
+#define MAIN_SOUND_CLICK "Assets/sounds/main-click.wav"
+#define MAIN_SOUND_HOVER "Assets/sounds/main-hover.wav"
 // forest
 #define FOREST_BACKGROUND_FILEPATH "Assets/images/forest_background.jpg"
 
 // sea
 #define SEA_BACKGROUND_FILEPATH "Assets/images/sea_background.png"
 #define SEA_CORAL_FILEPATH "Assets/images/sea_coral.png"
+#define SEA_SOUND_BACKGROUND "Assets/sounds/sea-background.wav"
 
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"

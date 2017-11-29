@@ -26,8 +26,15 @@ namespace DevJAD {
         sf::Sprite menuItemQuit;
         sf::Sprite menuItemOptions;
         sf::Sprite menuItemCredits;
+        
+        bool startHover, quitHover;
+        bool optionsHover, creditsHover;
+        
         unsigned short startMenuPositionX;
         unsigned short startMenuPositionY;
+        sf::Sound soundBackground;
+        sf::Sound soundClick;
+        sf::Sound soundHover;
         
     public:
         MainMenuState(GameDataRef data);
@@ -36,6 +43,7 @@ namespace DevJAD {
         void Update(float dt);
         void Draw(float dt);
         void CreateMenu();
+        void ResetHover();
     };
 
 }
