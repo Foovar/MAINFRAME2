@@ -41,6 +41,7 @@ namespace DevJAD {
             this->logo.setScale(0.7f, 0.7f);
         }
         
+        
         this->logo.setPosition(getCenterPosition(this->data->window.getSize(), this->logo.getGlobalBounds()));
         
     }
