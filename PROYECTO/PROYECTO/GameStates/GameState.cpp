@@ -8,7 +8,7 @@
 
 #include <sstream>
 #include "GameState.hpp"
-#include "Constants.hpp"
+#include "../Constants.hpp"
 #include <iostream>
 
 namespace DevJAD {

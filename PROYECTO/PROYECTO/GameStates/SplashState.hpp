@@ -10,8 +10,8 @@
 #define SplashState_hpp
 
 #include <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
 
 
 namespace DevJAD {

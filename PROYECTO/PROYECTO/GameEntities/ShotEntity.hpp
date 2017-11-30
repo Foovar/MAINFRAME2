@@ -9,7 +9,7 @@
 #ifndef Shot_hpp
 #define Shot_hpp
 #include <SFML/Graphics.hpp>
-#include "Game.hpp"
+#include "../Game.hpp"
 
 namespace DevJAD {
     class ShotEntity {

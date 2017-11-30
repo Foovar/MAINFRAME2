@@ -8,8 +8,8 @@
 
 #ifndef LianaController_hpp
 #define LianaController_hpp
-#include "Game.hpp"
-#include "LianaEntity.hpp"
+#include "../Game.hpp"
+#include "../GameEntities/LianaEntity.hpp"
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "iostream"

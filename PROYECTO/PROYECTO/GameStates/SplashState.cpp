@@ -7,10 +7,10 @@
 //
 #include <sstream>
 #include "SplashState.hpp"
-#include "Constants.hpp"
+#include "../Constants.hpp"
 #include "MainMenuState.hpp"
 #include <iostream>
-#include "Utils.hpp"
+#include "../Utils.hpp"
 
 namespace DevJAD {
     

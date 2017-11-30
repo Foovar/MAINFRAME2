@@ -8,7 +8,7 @@
 
 #ifndef SharkEntity_hpp
 #define SharkEntity_hpp
-#include "Constants.hpp"
+#include "../Constants.hpp"
 #include <SFML/Graphics.hpp>
 #include <math.h>
 #include "iostream"

@@ -9,7 +9,7 @@
 #ifndef LianaEntity_hpp
 #define LianaEntity_hpp
 #include <SFML/Graphics.hpp>
-#include "Game.hpp"
+#include "../Game.hpp"
 #include <math.h>
 
 namespace DevJAD {

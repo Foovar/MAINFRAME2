@@ -10,10 +10,10 @@
 #define TestState_hpp
 
 #include <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
-#include "ShotEntity.hpp"
-#include "MarioCharacter.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
+#include "../GameEntities/ShotEntity.hpp"
+#include "../Characters/MarioCharacter.hpp"
 #include "iostream"
 
 namespace DevJAD {

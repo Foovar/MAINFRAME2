@@ -10,11 +10,11 @@
 #define GameState_hpp
 
 #include <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
 #include <vector>
 #include "iostream"
-#include "LianaController.hpp"
+#include "../GameControllers/LianaController.hpp"
 
 namespace DevJAD {
     

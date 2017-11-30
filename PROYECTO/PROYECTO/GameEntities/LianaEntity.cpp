@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alex Paredes. All rights reserved.
 //
 
-#include "LianaEntity.hpp"
+#include "../GameEntities/LianaEntity.hpp"
 #include "iostream"
 
 namespace DevJAD {

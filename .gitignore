@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
-**/PSD/*
-**/SFML/*
-**/PROYECTO.xcodeproj/**
+PROYECTO/PSD/
+PROYECTO/SFML/
+PROYECTO/PROYECTO.xcodeproj/
+PROYECTO/PROYECTO.xcodeproj

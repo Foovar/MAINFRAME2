@@ -10,9 +10,9 @@
 #define MainMenuState_hpp
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "State.hpp"
-#include "Game.hpp"
-#include "Utils.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
+#include "../Utils.hpp"
 
 namespace DevJAD {
     

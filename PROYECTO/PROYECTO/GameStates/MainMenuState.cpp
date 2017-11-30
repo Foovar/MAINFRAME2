@@ -7,7 +7,7 @@
 //
 
 #include <sstream>
-#include "Constants.hpp"
+#include "../Constants.hpp"
 #include "MainMenuState.hpp"
 #include "GameState.hpp"
 #include "SeaGameState.hpp"

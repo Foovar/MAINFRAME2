@@ -9,9 +9,9 @@
 #ifndef GameOverState_hpp
 #define GameOverState_hpp
 #include <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
-#include "Constants.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
+#include "../Constants.hpp"
 #include "iostream"
 
 namespace DevJAD {

@@ -8,7 +8,7 @@
 
 #include "GameOverState.hpp"
 #include "MainMenuState.hpp"
-#include "Game.hpp"
+#include "../Game.hpp"
 
 namespace DevJAD {
     

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alex Paredes. All rights reserved.
 //
 
-#include "ShotEntity.hpp"
+#include "../GameEntities/ShotEntity.hpp"
 #include "iostream"
 
 namespace DevJAD {

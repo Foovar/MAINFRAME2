@@ -10,17 +10,17 @@
 #define SeaGameState_hpp
 
 #include <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
-#include "Collision.hpp"
-#include "SharkController.hpp"
-#include "Flash.hpp"
+#include "../State.hpp"
+#include "../Game.hpp"
+#include "../Collision.hpp"
+#include "../GameControllers/SharkController.hpp"
+#include "../Flash.hpp"
 #include "GameOverState.hpp"
-#include "Constants.hpp"
+#include "../Constants.hpp"
 #include <sstream>
-#include "ShotEntity.hpp"
-#include "MarioCharacter.hpp"
-#include "ScoreBar.hpp"
+#include "../GameEntities/ShotEntity.hpp"
+#include "../Characters/MarioCharacter.hpp"
+#include "../ScoreBar.hpp"
 
 namespace DevJAD {
     
