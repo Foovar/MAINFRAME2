@@ -19,6 +19,7 @@ namespace DevJAD {
     }
     
     void SplashState::Init(){
+        this->StartLoad();
         this->data->assets.LoadTexture("splash_logo", SPLASH_LOGO_FILEPATH);
         this->data->assets.LoadTexture("splash_extra", SPLASH_EXTRA_FILEPATH);
         this->data->assets.LoadTexture("sea background", SEA_BACKGROUND_FILEPATH);
@@ -44,7 +45,7 @@ namespace DevJAD {
         }
         
         this->logo.setPosition(getCenterPosition(this->data->window.getSize(), this->logo.getGlobalBounds()));
-        
+        this->FinishLoad();
     }
     
     void SplashState::HandleInput(){
@@ -56,7 +57,7 @@ namespace DevJAD {
     }
     
     void SplashState::Update(float dt){
-        
+        std::cout << " Time "<< dt <<std::endl;
         if(this->clock.getElapsedTime().asSeconds() <= 1) {
             this->extra.setColor(sf::Color(255, 255, 255,this->clock.getElapsedTime().asSeconds() * 255));
             this->logo.setColor(sf::Color(255, 255, 255, this->clock.getElapsedTime().asSeconds() * 255));
@@ -68,6 +69,7 @@ namespace DevJAD {
         if(this->clock.getElapsedTime().asSeconds() > SPLASH_DURATION){
             this->data->machine.AddState( StateRef(new MainMenuState(this->data)), true );
         }
+        
     }
     
     void SplashState::Draw(float dt){
@@ -76,6 +78,15 @@ namespace DevJAD {
         this->data->window.draw(this->extra);
         this->data->window.draw(this->logo);
         this->data->window.display();
+    }
+    
+    void SplashState::StartLoad(){
+        std::cout << "Iniciando la carga " << std::endl;
+    }
+    
+    void SplashState::FinishLoad(){
+        std::cout << "Fin de la carga " << std::endl;
+        //this->data->machine.AddState( StateRef(new MainMenuState(this->data)), true );
     }
     
 }

@@ -84,8 +84,8 @@
 
 // mountain
 #define MT_BACKGROUND_FILEPATH "Assets/images/mt_background.jpg"
-#define MT_COLINE_FILEPATH "Assets/images/mt_coline.jpg"
-#define MT_ROCK_FILEPATH "Assets/images/mt_rock.jpg"
+#define MT_COLINE_FILEPATH "Assets/images/mt_coline.png"
+#define MT_ROCK_FILEPATH "Assets/images/mt_rock.png"
 
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"
