@@ -26,11 +26,11 @@ namespace DevJAD {
         this->menu.setTexture(this->data->assets.GetTexture("main menu"));
         this->background.setTexture(this->data->assets.GetTexture("main background"));
         this->title.setTexture(this->data->assets.GetTexture("main title"));
-        this->soundBackground.setBuffer(this->data->assets.GetSoundBuffer("main sound"));
+        this->musicBackground.openFromFile(MAIN_MUSIC_BACKGROUND);
         this->soundClick.setBuffer(this->data->assets.GetSoundBuffer("main click"));
         this->soundHover.setBuffer(this->data->assets.GetSoundBuffer("main hover"));
-        this->soundBackground.setLoop(true);
-        this->soundBackground.play();
+        this->musicBackground.setLoop(true);
+        this->musicBackground.play();
         
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM){
             this->background.setScale(0.9, 0.9);
@@ -127,8 +127,8 @@ namespace DevJAD {
                 //this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
             }else if(this->data->input.IsSpriteClicked(this->menuItemStart, sf::Mouse::Button::Left, this->data->window)){
                 this->soundClick.play();
-                this->soundBackground.setLoop(false);
-                this->soundBackground.stop();
+                this->musicBackground.setLoop(false);
+                this->musicBackground.stop();
                 this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
                 //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
             }
