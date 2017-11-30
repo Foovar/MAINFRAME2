@@ -28,6 +28,9 @@ namespace DevJAD {
         void HandleInput();
         void Update(float dt);
         void Draw(float dt);
+        
+        void FinishLoad();
+        void StartLoad();
     };
     
 }

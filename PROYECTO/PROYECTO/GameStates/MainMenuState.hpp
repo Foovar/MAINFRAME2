@@ -32,7 +32,7 @@ namespace DevJAD {
         
         unsigned short startMenuPositionX;
         unsigned short startMenuPositionY;
-        sf::Sound soundBackground;
+        sf::Music musicBackground;
         sf::Sound soundClick;
         sf::Sound soundHover;
         
