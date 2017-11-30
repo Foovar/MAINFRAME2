@@ -9,8 +9,8 @@
 #ifndef MarioCharacter_hpp
 #define MarioCharacter_hpp
 
-#include "Game.hpp"
-#include "ShotEntity.hpp"
+#include "../Game.hpp"
+#include "../GameEntities/ShotEntity.hpp"
 
 namespace DevJAD {
     class MarioCharacter {

@@ -12,7 +12,6 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
-#include "Tarzan.hpp"
 #include <vector>
 #include "iostream"
 #include "LianaController.hpp"

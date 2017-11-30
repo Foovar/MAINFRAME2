@@ -16,7 +16,6 @@
 #include "SharkController.hpp"
 #include "Flash.hpp"
 #include "GameOverState.hpp"
-#include "FakeMario.hpp"
 #include "Constants.hpp"
 #include <sstream>
 #include "ShotEntity.hpp"

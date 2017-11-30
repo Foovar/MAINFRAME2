@@ -10,7 +10,6 @@
 #include "Constants.hpp"
 #include "Game.hpp"
 #include <SFML/Graphics.hpp>
-#include "SharkEntity.hpp"
 
 int main(int argc, const char * argv[]) {
     DevJAD::Game("UPAO", SCREEN_SIZE_TYPE_LARGE); // SCREEN_SIZE_TYPE_LARGE

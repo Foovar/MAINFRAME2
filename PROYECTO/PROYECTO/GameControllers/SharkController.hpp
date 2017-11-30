@@ -10,12 +10,12 @@
 #define SharkController_hpp
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include "SharkEntity.hpp"
-#include "Game.hpp"
+#include "../GameEntities/SharkEntity.hpp"
+#include "../Game.hpp"
 #include <cstdlib>
 #include <ctime>
 #include "iostream"
-#include "Collision.hpp"
+#include "../Collision.hpp"
 
 namespace DevJAD {
     class SharkController{

@@ -7,10 +7,10 @@
 //
 
 #include "Game.hpp"
-#include "SplashState.hpp"
-#include "TestState.hpp"
-#include "SeaGameState.hpp"
-#include "MainMenuState.hpp"
+#include "GameStates/SplashState.hpp"
+#include "GameStates/TestState.hpp"
+#include "GameStates/SeaGameState.hpp"
+#include "GameStates/MainMenuState.hpp"
 
 namespace DevJAD {
     
