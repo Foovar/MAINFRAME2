@@ -30,7 +30,19 @@
 *.exe
 *.out
 *.app
+*.db
+*.VC.db
+*.VC.VC.opendb
+
+# VS STUDIO
+*.vcxproj
+*.vs
+*.sln
+*.vcxproj.*
+
 PROYECTO/PSD/
 PROYECTO/SFML/
 PROYECTO/PROYECTO.xcodeproj/
 PROYECTO/PROYECTO.xcodeproj
+Debug/
+Relase/
