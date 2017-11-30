@@ -23,6 +23,7 @@ namespace DevJAD {
         bool attackCompleted;
         ShotEntity * shotEntity;
         sf::Clock clock;
+        sf::Sound soundAttack;
     public:
         MarioCharacter(GameDataRef _data);
         void Draw();
@@ -34,6 +35,7 @@ namespace DevJAD {
         int GetState();
         void SetDefaultState(int state);
         bool hasShoot();
+        float GetMoveAmount();
         const sf::Sprite &GetShootSprite() const;
     };
 }

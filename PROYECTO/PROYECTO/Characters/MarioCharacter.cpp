@@ -11,6 +11,7 @@
 
 namespace DevJAD {
     MarioCharacter::MarioCharacter(GameDataRef _data): data(_data) {
+        this->soundAttack.setBuffer(this->data->assets.GetSoundBuffer("sea attack"));
         this->characterStatus = CHARACTER_STATE_WALK;
         this->frameInterator = 0;
         this->movementX = 0;
@@ -72,6 +73,8 @@ namespace DevJAD {
                 this->switchTime = 0.08;
                 break;
             case CHARACTER_STATE_ATTACK:
+                if(this->attackCompleted)
+                    this->soundAttack.play();
                 this->framePosY = 90;
                 this->totalFrames = 21;
                 this->switchTime = 0.03;
@@ -150,5 +153,7 @@ namespace DevJAD {
     bool MarioCharacter::hasShoot(){
         return this->shotEntity->hasShoot();
     }
-    
+    float MarioCharacter::GetMoveAmount(){
+        return this->moveAmount;
+    }
 }

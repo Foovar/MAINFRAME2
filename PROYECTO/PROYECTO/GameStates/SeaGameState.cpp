@@ -41,6 +41,7 @@ namespace DevJAD {
             this->sharks->SetScale(0.5, 0.5);
         }
         this->coral.setPosition(0, this->background.getGlobalBounds().height - this->coral.getGlobalBounds().height);
+        this->soundBackground.setVolume(50.f);
         this->soundBackground.play();
     }
     

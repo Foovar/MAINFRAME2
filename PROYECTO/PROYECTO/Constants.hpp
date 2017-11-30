@@ -78,6 +78,7 @@
 #define SEA_BACKGROUND_FILEPATH "Assets/images/sea_background.png"
 #define SEA_CORAL_FILEPATH "Assets/images/sea_coral.png"
 #define SEA_SOUND_BACKGROUND "Assets/sounds/sea-background.wav"
+#define SEA_ATTACK "Assets/sounds/sea-attack.wav"
 
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"

@@ -29,6 +29,8 @@ namespace DevJAD {
         this->data->assets.LoadSoundBuffer("main click", MAIN_SOUND_CLICK);
         this->data->assets.LoadSoundBuffer("main hover", MAIN_SOUND_HOVER);
         this->data->assets.LoadSoundBuffer("sea background sound", SEA_SOUND_BACKGROUND);
+        this->data->assets.LoadSoundBuffer("sea attack", SEA_ATTACK);
+        
         this->logo.setTexture(this->data->assets.GetTexture("splash_logo"));
         this->extra.setTexture(this->data->assets.GetTexture("splash_extra"));
         this->extra.setPosition(sf::Vector2f(this->data->window.getSize().x / 2 - this->extra.getGlobalBounds().width/2, -120));

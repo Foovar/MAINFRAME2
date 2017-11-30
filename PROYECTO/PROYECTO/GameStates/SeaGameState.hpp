@@ -38,7 +38,6 @@ namespace DevJAD {
         MarioCharacter * marioCharacter;
         ScoreBar * score;
         sf::Sound soundBackground;
-        
         sf::Font fontPoints;
         std::vector<sf::Text> textPoints;
         
