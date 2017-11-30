@@ -82,6 +82,11 @@
 #define SEA_MUSIC_BACKGROUND "Assets/sounds/sea-background.wav"
 #define SEA_ATTACK "Assets/sounds/sea-attack.wav"
 
+// mountain
+#define MT_BACKGROUND_FILEPATH "Assets/images/mt_background.jpg"
+#define MT_COLINE_FILEPATH "Assets/images/mt_coline.jpg"
+#define MT_ROCK_FILEPATH "Assets/images/mt_rock.jpg"
+
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"
 #define GAME_OVER_BUTTONS_FILEPATH "Assets/images/game_over_buttons.png"

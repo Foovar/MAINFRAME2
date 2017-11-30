@@ -30,6 +30,8 @@ namespace DevJAD {
         this->data->assets.LoadSoundBuffer("main hover", MAIN_SOUND_HOVER);
         this->data->assets.LoadSoundBuffer("sea background sound", SEA_SOUND_BACKGROUND);
         this->data->assets.LoadSoundBuffer("sea attack", SEA_ATTACK);
+        this->data->assets.LoadTexture("mt background", MT_BACKGROUND_FILEPATH);
+        this->data->assets.LoadTexture("mt coline", MT_COLINE_FILEPATH);
         
         this->logo.setTexture(this->data->assets.GetTexture("splash_logo"));
         this->extra.setTexture(this->data->assets.GetTexture("splash_extra"));
@@ -40,7 +42,6 @@ namespace DevJAD {
             this->extra.setPosition(this->extra.getPosition().x + this->extra.getGlobalBounds().width / 3, this->extra.getPosition().y);
             this->logo.setScale(0.7f, 0.7f);
         }
-        
         
         this->logo.setPosition(getCenterPosition(this->data->window.getSize(), this->logo.getGlobalBounds()));
         
