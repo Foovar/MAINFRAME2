@@ -68,8 +68,8 @@
 #define MAIN_BACKGROUND_FILEPATH "Assets/images/main_background.jpg"
 #define MAIN_MENU_FILEPATH "Assets/images/main_menu_sprite.png"
 #define MAIN_TITLE_FILEPATH "Assets/images/main_title.png"
-#define MAIN_MUSIC_BACKGROUND "Assets/sounds/main-sound.wav"
-#define MAIN_SOUND_BACKGROUND "Assets/sounds/main-sound.wav"
+#define MAIN_MUSIC_BACKGROUND "Assets/sounds/main-sound.flac"
+#define MAIN_SOUND_BACKGROUND "Assets/sounds/main-sound.flac"
 #define MAIN_SOUND_CLICK "Assets/sounds/main-click.wav"
 #define MAIN_SOUND_HOVER "Assets/sounds/main-hover.wav"
 // forest
@@ -78,14 +78,16 @@
 // sea
 #define SEA_BACKGROUND_FILEPATH "Assets/images/sea_background.png"
 #define SEA_CORAL_FILEPATH "Assets/images/sea_coral.png"
-#define SEA_SOUND_BACKGROUND "Assets/sounds/sea-background.wav"
-#define SEA_MUSIC_BACKGROUND "Assets/sounds/sea-background.wav"
+#define SEA_SOUND_BACKGROUND "Assets/sounds/sea-background.flac"
+#define SEA_MUSIC_BACKGROUND "Assets/sounds/sea-background.flac"
 #define SEA_ATTACK "Assets/sounds/sea-attack.wav"
 
 // mountain
 #define MT_BACKGROUND_FILEPATH "Assets/images/mt_background.jpg"
 #define MT_COLINE_FILEPATH "Assets/images/mt_coline.png"
 #define MT_ROCK_FILEPATH "Assets/images/mt_rock.png"
+#define MT_MUSIC_BACKGROUND "Assets/sounds/mt-background.flac"
+#define MT_SOUND_BACKGROUND "Assets/sounds/mt-background.flac"
 
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"
