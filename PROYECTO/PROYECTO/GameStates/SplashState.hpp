@@ -22,6 +22,8 @@ namespace DevJAD {
         sf::Sprite background;
         sf::Sprite logo;
         sf::Sprite extra;
+        bool isFinishLoad;
+        float transparent;
     public:
         SplashState(GameDataRef data);
         void Init();

@@ -20,9 +20,6 @@ namespace DevJAD {
     }
     
     void MainMenuState::Init(){
-        this->data->assets.LoadTexture("main background", MAIN_BACKGROUND_FILEPATH);
-        this->data->assets.LoadTexture("main menu", MAIN_MENU_FILEPATH);
-        this->data->assets.LoadTexture("main title", MAIN_TITLE_FILEPATH);
         this->menu.setTexture(this->data->assets.GetTexture("main menu"));
         this->background.setTexture(this->data->assets.GetTexture("main background"));
         this->title.setTexture(this->data->assets.GetTexture("main title"));
