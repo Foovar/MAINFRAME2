@@ -59,7 +59,7 @@ namespace DevJAD {
             this->lianas->SpawnLianas();
         }
         this->shapeGameOver.setFillColor(sf::Color(255, 255, 255, 0));
-        
+        this->deadSound.setBuffer(this->data->assets.GetSoundBuffer("dead sound"));
     }
     
     void GameState::SpawnTipsAndBranches(){
@@ -115,8 +115,10 @@ namespace DevJAD {
         }
         
         if(this->marioCharacter->GetPosition().y > this->data->window.getSize().y - 280){
-            if(!this->isWon)
+            if(!this->isWon){
                 this->marioCharacter->SetState(CHARACTER_STATE_DEAD);
+                this->deadSound.play();
+            }
             this->isGameOver = true;
             this->clock.restart();
         }

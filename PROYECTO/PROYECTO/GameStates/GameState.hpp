@@ -40,6 +40,7 @@ namespace DevJAD {
         sf::Music musicBackground;
         bool isGameOver, isWon;
         sf::RectangleShape shapeGameOver;
+        sf::Sound deadSound;
         
     public:
         GameState(GameDataRef data);
