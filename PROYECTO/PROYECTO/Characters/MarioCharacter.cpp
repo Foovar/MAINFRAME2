@@ -25,7 +25,7 @@ namespace DevJAD {
         this->spriteCharacter.setTexture(*marioTexture);
         this->spriteCharacter.setTextureRect(sf::IntRect(0, 0, 0, 0));
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
-            this->spriteCharacter.setScale(0.7, 0.7);
+            this->spriteCharacter.setScale(0.8, 0.8);
         else
             this->spriteCharacter.setScale(1.3, 1.3);
         
@@ -153,7 +153,14 @@ namespace DevJAD {
         
         if(this->characterStatus == CHARACTER_STATE_SWIM || this->characterStatus == CHARACTER_STATE_ATTACK)
             this->spriteCharacter.setPosition(this->data->window.getView().getCenter().x + this->movementX, (this->data->window.getSize().y - this->data->window.getSize().y/4) + this->movementY );
-        
+        }else {
+            
+            if(CHARACTER_STATE_HANG == this->defaultState) {
+                this->framePosY = 625;
+                this->totalFrames = 6;
+                this->spriteCharacter.move(0, dt * 200);
+            }
+            
         }
     }
     
@@ -183,6 +190,7 @@ namespace DevJAD {
     void MarioCharacter::SetState(int state){
         if(state == CHARACTER_STATE_ATTACK && this->characterStatus != CHARACTER_STATE_ATTACK){
             this->frameInterator = 0;
+            this->framePosX = 0;
             this->clock.restart();
         }
         this->characterStatus = state;

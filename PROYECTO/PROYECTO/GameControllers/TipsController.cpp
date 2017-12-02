@@ -14,6 +14,8 @@ namespace DevJAD {
     
     void TipsController::SpawnTips(){
         sf::Sprite tip(this->data->assets.GetTexture("tip"));
+        if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
+            tip.setScale(0.85, 0.85);
         tip.setPosition(this->tips.size() * tip.getGlobalBounds().width, this->data->window.getSize().y - tip.getGlobalBounds().height);
         this->tips.push_back(tip);
     }

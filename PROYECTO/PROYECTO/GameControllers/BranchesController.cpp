@@ -15,8 +15,10 @@ namespace DevJAD {
     
     void BranchesController::SpawnBranches(){
         sf::Sprite branch(this->data->assets.GetTexture("branch"));
-        branch.setScale(0.5, 0.5);
-        branch.setPosition(this->branches.size() * branch.getGlobalBounds().width / 3, this->data->window.getSize().y - branch.getGlobalBounds().height);
+        if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
+            branch.setScale(0.3, 0.3);
+        
+        branch.setPosition(this->branches.size() * branch.getGlobalBounds().width / 1.5, this->data->window.getSize().y - branch.getGlobalBounds().height/1.2);
         this->branches.push_back(branch);
     }
     
