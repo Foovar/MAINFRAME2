@@ -92,8 +92,11 @@
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"
 #define GAME_OVER_BUTTONS_FILEPATH "Assets/images/game_over_buttons.png"
+// WIN
 
+#define WIN_TEXT_PATH "Assets/images/YouWin.png"
 
+#define DEAD_SOUND_FILEPATH "Assets/sounds/DeadSound.wav"
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"
 #define BRANCH_FILEPATH "Assets/images/branches.png"

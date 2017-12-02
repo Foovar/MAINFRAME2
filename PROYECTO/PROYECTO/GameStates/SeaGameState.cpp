@@ -25,10 +25,14 @@ namespace DevJAD {
         
         this->background.setTexture(this->data->assets.GetTexture("sea background"));
         this->coral.setTexture(this->data->assets.GetTexture("sea coral"));
-        
+        this->deadSound.setBuffer(this->data->assets.GetSoundBuffer("dead sound"));
         this->marioCharacter = new MarioCharacter(this->data);
         this->marioCharacter->SetDefaultState(CHARACTER_STATE_SWIM);
-        
+        this->shapeGameOver.setSize(sf::Vector2f(background.getGlobalBounds().width, this->data->window.getSize().y));
+        this->shapeGameOver.setFillColor(sf::Color(255, 255, 255, 0));
+        this->isGameOver = false;
+        this->isWon = false;
+        this->alphaGameOver = 0;
         this->sharks = new SharkController(this->data);
         this->flash = new Flash(this->data, this->background.getGlobalBounds().width, this->data->window.getSize().y);
         this->score = new ScoreBar(this->data);
@@ -81,6 +85,7 @@ namespace DevJAD {
             
             std::vector<SharkEntity> sharkEntities = this->sharks->GetEntities();
             
+            // Los tiburones atacan
             for(unsigned short int i = 0; i< sharkEntities.size(); i++){
                 if(this->sharks->GetSharkState(i) != SHARK_DIE){
                     sf::FloatRect sharkRect = sharkEntities.at(i).GetSprite().getGlobalBounds();
@@ -95,12 +100,15 @@ namespace DevJAD {
                         this->sharks->SetSharkState(i, SHARK_ATTACK);
                         this->marioCharacter->SetState(CHARACTER_STATE_DEAD);
                         this->gameState = IS_GAME_OVER;
+                        this->isGameOver = true;
+                        this->deadSound.play();
                         this->musicBackground.stop();
                         this->clock.restart();
                     }
                 }
             }
             
+            // detectar colision del ataque con el tiburon
             for(unsigned short int i = 0; i< sharkEntities.size(); i++){
                 if(!this->marioCharacter->hasShoot() && this->sharks->GetSharkState(i) != SHARK_DIE){
                     if(this->collision.CheckSpriteCollision(this->marioCharacter->GetShootSprite(), sharkEntities.at(i).GetSprite())){
@@ -137,7 +145,9 @@ namespace DevJAD {
                     this->viewScreen.move((dt*maxDuration), 0);
                     this->maxDuration+=dt*maxDuration;
                 }else{
-                    this->flash->Show(dt);
+                    this->isWon = true;
+                    this->isGameOver = true;
+                    //this->flash->Show(dt);
                     //this->gameState = IS_GAME_OVER;
                 } // level terminado -> pasar al siguiente nivel.
                 this->clock.restart();
@@ -156,12 +166,20 @@ namespace DevJAD {
             }
         }
         
-        if(this->gameState == IS_GAME_OVER){
+        /*if(this->gameState == IS_GAME_OVER){
             this->flash->Show(dt);
             if(this->clock.getElapsedTime().asSeconds() > GAME_OVER_AFTER_FLASH / 1000){
                 this->data->machine.AddState(StateRef(new GameOverState(this->data)), true);
             }
+        }*/
+        if(this->isGameOver && this->alphaGameOver >= 255){
+            this->musicBackground.stop();
+            if(!this->isWon)
+                this->data->machine.AddState(StateRef(new GameOverState(this->data)));
+            else
+                this->data->machine.AddState(StateRef(new WinState(this->data)), true);
         }
+        
     }
     
     void SeaGameState::Draw(float dt){
@@ -176,6 +194,16 @@ namespace DevJAD {
         }
         this->score->Draw();
         this->flash->Draw();
+        
+        if(this->isGameOver){
+            this->shapeGameOver.setFillColor(sf::Color(255, 255, 255, this->alphaGameOver));
+            this->data->window.draw(this->shapeGameOver);
+            if(alphaGameOver < 255 - dt * 5)
+                alphaGameOver += dt * 5;
+            else
+                alphaGameOver = 255;
+        }
+        
         this->data->window.display();
     }
     

@@ -21,6 +21,7 @@
 #include "../GameEntities/ShotEntity.hpp"
 #include "../Characters/MarioCharacter.hpp"
 #include "../ScoreBar.hpp"
+#include "WinState.hpp"
 
 namespace DevJAD {
     
@@ -39,9 +40,11 @@ namespace DevJAD {
         sf::Music musicBackground;
         sf::Font fontPoints;
         std::vector<sf::Text> textPoints;
-        
+        bool isGameOver, isWon;
+        sf::RectangleShape shapeGameOver;
+         sf::Sound deadSound;
         SharkController * sharks;
-        float maxDuration;
+        float maxDuration, alphaGameOver;
         Flash * flash;
         int gameState;
         
