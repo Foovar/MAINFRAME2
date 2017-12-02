@@ -11,6 +11,7 @@
 
 #include "../Game.hpp"
 #include "../GameEntities/ShotEntity.hpp"
+#include "../Physics.hpp"
 
 namespace DevJAD {
     class MarioCharacter {
@@ -20,15 +21,19 @@ namespace DevJAD {
         float framePosY, framePosX, moveAmount;
         float switchTime;
         int movementX, movementY;
-        bool attackCompleted;
+        bool attackCompleted, jumpCompleted;
         ShotEntity * shotEntity;
         sf::Clock clock;
         sf::Sound soundAttack;
+        Physics * physics;
+        sf::Clock jumpClock;
+        float timeJump;
     public:
         MarioCharacter(GameDataRef _data);
         void Draw();
         void Animate(float dt);
         void Update(float dt);
+        
         void Move(int type);
         const sf::Sprite &GetSprite() const;
         void SetState(int state);
@@ -37,6 +42,12 @@ namespace DevJAD {
         bool hasShoot();
         float GetMoveAmount();
         const sf::Sprite &GetShootSprite() const;
+        void SetPosition(float x, float y);
+        void SetPosition(sf::Vector2f position);
+        void ResetAnimation();
+        sf::Vector2f GetPosition();
+        
+        void Jump();
     };
 }
 

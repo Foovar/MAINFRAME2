@@ -1,0 +1,40 @@
+//
+//  BranchesController.cpp
+//  PROYECTO
+//
+//  Created by Alex Paredes on 2/12/17.
+//  Copyright © 2017 Alex Paredes. All rights reserved.
+//
+
+#include "BranchesController.hpp"
+
+namespace DevJAD {
+    BranchesController::BranchesController(GameDataRef _data): data(_data){
+        
+    }
+    
+    void BranchesController::SpawnBranches(){
+        sf::Sprite branch(this->data->assets.GetTexture("branch"));
+        branch.setScale(0.5, 0.5);
+        branch.setPosition(this->branches.size() * branch.getGlobalBounds().width / 3, this->data->window.getSize().y - branch.getGlobalBounds().height);
+        this->branches.push_back(branch);
+    }
+    
+    void BranchesController::Draw(){
+        for(unsigned int i = 0; i < this->branches.size(); i++){
+            this->data->window.draw(this->branches.at(i));
+        }
+    }
+    
+    void BranchesController::Update(float dt){
+        
+    }
+    
+    void BranchesController::SetPosition(int i, sf::Vector2f p){
+        this->branches.at(i).setPosition(p);
+    }
+    
+    sf::Vector2f BranchesController::GetPosition(int i){
+        return this->branches.at(i).getPosition();
+    }
+}

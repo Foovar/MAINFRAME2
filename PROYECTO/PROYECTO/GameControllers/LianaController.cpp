@@ -14,7 +14,7 @@ namespace DevJAD {
     }
     
     void LianaController::SpawnLianas(){
-        float x = this->lianas.size() == 0  ? 120.0f : ( this->lianas.size() * 520 );
+        float x = this->lianas.size() == 0  ? 120.0f : (this->lianas.size() * 450 );
         LianaEntity liana(this->data, sf::Vector2f(x, 0.0f), 175, 1 * ((this->lianas.size() & 1) == 0 ? -1: 1) );
         this->lianas.push_back(liana);
         
@@ -34,5 +34,9 @@ namespace DevJAD {
         for (unsigned int i = 0; i < this->lianas.size(); i++) {
             this->lianas.at(i).Draw();
         }
+    }
+    
+    sf::Vector2f LianaController::GetPosition(int i){
+        return this->lianas.at(i).GetLastPoint();
     }
 }

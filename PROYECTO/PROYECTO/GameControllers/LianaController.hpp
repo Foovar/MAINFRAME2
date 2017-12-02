@@ -25,6 +25,7 @@ namespace DevJAD {
         void SpawnLianas();
         void Update(float dt);
         void SetPosition(int i, sf::Vector2f p);
+        sf::Vector2f GetPosition(int i);
     };
 }
 

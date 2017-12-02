@@ -15,6 +15,10 @@
 #include <vector>
 #include "iostream"
 #include "../GameControllers/LianaController.hpp"
+#include "../Characters/MarioCharacter.hpp"
+#include "../Collision.hpp"
+#include "../GameControllers/TipsController.hpp"
+#include "../GameControllers/BranchesController.hpp"
 
 namespace DevJAD {
     
@@ -23,8 +27,14 @@ namespace DevJAD {
         std::vector<sf::Sprite> backgroundChange;
         sf::Clock clock;
         sf::View viewScreen;
-        float backgrounSize, viewAccum;
+        float backgrounSize, viewAccum, movingScreen;
         LianaController * lianas;
+        TipsController * tips;
+        BranchesController * branches;
+        MarioCharacter * marioCharacter;
+        Collision * collision;
+        int currentLiana;
+        sf::Music musicBackground;
         
     public:
         GameState(GameDataRef data);
@@ -32,6 +42,8 @@ namespace DevJAD {
         void HandleInput();
         void Update(float dt);
         void Draw(float dt);
+        
+        void MoveNextScreen();
     };
     
 }

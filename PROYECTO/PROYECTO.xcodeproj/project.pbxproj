@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA0E3EB01FB0228D00A5ABDA /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0E3EAE1FB0228D00A5ABDA /* Collision.cpp */; };
+		FA26B76E1FD28FA20076DBF1 /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B76C1FD28FA20076DBF1 /* Physics.cpp */; };
+		FA26B7711FD2D1940076DBF1 /* TipsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B76F1FD2D1940076DBF1 /* TipsController.cpp */; };
+		FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */; };
 		FA3878BD1FAD99AF002E2541 /* SeaGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */; };
 		FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412E91FAAFACF00E5E3A0 /* Game.cpp */; };
 		FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412ED1FAAFF7100E5E3A0 /* SplashState.cpp */; };
@@ -67,6 +70,12 @@
 		FA26B7631FCF55050076DBF1 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "SFML/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
 		FA26B7641FCF55050076DBF1 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = SFML/Frameworks/SFML.framework; sourceTree = "<group>"; };
 		FA26B7651FCF55050076DBF1 /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "SFML/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
+		FA26B76C1FD28FA20076DBF1 /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
+		FA26B76D1FD28FA20076DBF1 /* Physics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Physics.hpp; sourceTree = "<group>"; };
+		FA26B76F1FD2D1940076DBF1 /* TipsController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TipsController.cpp; sourceTree = "<group>"; };
+		FA26B7701FD2D1940076DBF1 /* TipsController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TipsController.hpp; sourceTree = "<group>"; };
+		FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BranchesController.cpp; sourceTree = "<group>"; };
+		FA26B7731FD2D7DF0076DBF1 /* BranchesController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BranchesController.hpp; sourceTree = "<group>"; };
 		FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeaGameState.cpp; sourceTree = "<group>"; };
 		FA3878BC1FAD99AF002E2541 /* SeaGameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeaGameState.hpp; sourceTree = "<group>"; };
 		FA4412E91FAAFACF00E5E3A0 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -180,6 +189,10 @@
 				FAAAE4121FB37FF900EDA356 /* SharkController.hpp */,
 				FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */,
 				FA4DE16E1FCB7BFC0013F028 /* LianaController.hpp */,
+				FA26B76F1FD2D1940076DBF1 /* TipsController.cpp */,
+				FA26B7701FD2D1940076DBF1 /* TipsController.hpp */,
+				FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */,
+				FA26B7731FD2D7DF0076DBF1 /* BranchesController.hpp */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -227,6 +240,8 @@
 				FA5B8AB91FC9322D007F5C4F /* Utils.hpp */,
 				FA61206C1FCB464500EE1482 /* ScoreBar.cpp */,
 				FA61206D1FCB464500EE1482 /* ScoreBar.hpp */,
+				FA26B76C1FD28FA20076DBF1 /* Physics.cpp */,
+				FA26B76D1FD28FA20076DBF1 /* Physics.hpp */,
 			);
 			path = PROYECTO;
 			sourceTree = "<group>";
@@ -317,15 +332,18 @@
 				FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */,
 				FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */,
 				FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */,
+				FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */,
 				FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */,
 				FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */,
 				FA3878BD1FAD99AF002E2541 /* SeaGameState.cpp in Sources */,
+				FA26B76E1FD28FA20076DBF1 /* Physics.cpp in Sources */,
 				FA61206B1FCA8DB900EE1482 /* MarioCharacter.cpp in Sources */,
 				FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */,
 				FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */,
 				FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */,
 				FA4DE16C1FCB67100013F028 /* LianaEntity.cpp in Sources */,
 				FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */,
+				FA26B7711FD2D1940076DBF1 /* TipsController.cpp in Sources */,
 				FA61206E1FCB464500EE1482 /* ScoreBar.cpp in Sources */,
 				FAAAE40F1FB37B4A00EDA356 /* SharkEntity.cpp in Sources */,
 			);

@@ -126,8 +126,8 @@ namespace DevJAD {
                 this->soundClick.play();
                 this->musicBackground.setLoop(false);
                 this->musicBackground.stop();
-                this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
-                //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
+                //this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
+                this->data->machine.AddState(StateRef(new GameState(this->data)), true);
             }
         }
     }

@@ -19,8 +19,6 @@ namespace DevJAD {
     }
     
     void SeaGameState::Init(){
-        this->data->assets.LoadTexture("character 01", GAME_CHARACTER01_PATH);
-        this->data->assets.LoadTexture("character 02", GAME_CHARACTER02_PATH);
         this->data->assets.LoadTexture("shark", SHARK_FILEPATH);
         this->data->assets.LoadTexture("sea coral", SEA_CORAL_FILEPATH);
         this->musicBackground.openFromFile(SEA_MUSIC_BACKGROUND);

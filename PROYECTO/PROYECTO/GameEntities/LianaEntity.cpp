@@ -30,7 +30,7 @@ namespace DevJAD {
     void LianaEntity::Draw(){
         this->data->window.draw(this->ropeLine, &this->ropeTexture);
         this->data->window.draw(this->shape);
-        this->data->window.draw(this->shapeTest);
+        //this->data->window.draw(this->shapeTest);
     }
     
     void LianaEntity::Update(float dt){
@@ -46,18 +46,18 @@ namespace DevJAD {
             this->ropeLine[1].position = sf::Vector2f(this->position.x + ( this->armLength * 2), this->position.y);
             this->ropeLine[2].position = sf::Vector2f(this->position.x, this->position.y); // ultimo punto
             
-            std::cout << "0x:" << this->ropeLine[2].position.x +20 << "  0y:" << this->ropeLine[2].position.y << " :: " << this->angle << std::endl;
-            this->shapeTest.setPosition(this->ropeLine[2].position.x , this->ropeLine[2].position.y - 50);
+            //std::cout << "0x:" << this->ropeLine[2].position.x +20 << "  0y:" << this->ropeLine[2].position.y << " :: " << this->angle << std::endl;
+            //this->shapeTest.setPosition(this->ropeLine[2].position.x +20, this->ropeLine[2].position.y);
             // tetura
             this->ropeLine[0].texCoords = sf::Vector2f(0, 0);
             this->ropeLine[1].texCoords = sf::Vector2f(220, this->position.y);
             this->ropeLine[2].texCoords = sf::Vector2f(0, this->position.y);
             
-            /*this->shape.setRadius(5);
+            this->shape.setRadius(5);
             this->shape.setFillColor(sf::Color(84,139,22));
             this->shape.setOutlineThickness(2);
             this->shape.setOutlineColor(sf::Color(45,97,22));
-            this->shape.setPosition(this->position.x + 20, this->position.y - 5);*/
+            this->shape.setPosition(this->position.x + 20, this->position.y - 5);
             this->clock.restart();
         }
     }
@@ -67,5 +67,8 @@ namespace DevJAD {
     }
     sf::VertexArray LianaEntity::GetRopeLine(){
         return this->ropeLine;
+    }
+    sf::Vector2f LianaEntity::GetLastPoint(){
+        return { this->ropeLine[2].position.x + 20, this->ropeLine[2].position.y };
     }
 }

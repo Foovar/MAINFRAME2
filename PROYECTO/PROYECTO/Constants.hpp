@@ -74,7 +74,7 @@
 #define MAIN_SOUND_HOVER "Assets/sounds/main-hover.wav"
 // forest
 #define FOREST_BACKGROUND_FILEPATH "Assets/images/forest_background.jpg"
-
+#define FOREST_MUSIC_BACKGROUND "Assets/sounds/jungle_background.flac"
 // sea
 #define SEA_BACKGROUND_FILEPATH "Assets/images/sea_background.png"
 #define SEA_CORAL_FILEPATH "Assets/images/sea_coral.png"
@@ -95,6 +95,8 @@
 
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"
+#define BRANCH_FILEPATH "Assets/images/branches.png"
+#define TIPS_FILEPATH "Assets/images/tips.png"
 #define SHARK_SWIMMING 0
 #define SHARK_DIE 1
 #define SHARK_ATTACK 2

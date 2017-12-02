@@ -33,6 +33,7 @@ namespace DevJAD {
         void Draw();
         sf::VertexArray GetRopeLine();
         void SetPosition(sf::Vector2f a);
+        sf::Vector2f GetLastPoint();
     };
 }
 

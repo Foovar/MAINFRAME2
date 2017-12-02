@@ -20,6 +20,7 @@ namespace DevJAD {
     
     void SplashState::Init(){
         this->StartLoad();
+        this->data->assets.LoadTexture("character 02", GAME_CHARACTER02_PATH);
         this->data->assets.LoadTexture("splash_logo", SPLASH_LOGO_FILEPATH);
         this->data->assets.LoadTexture("splash_extra", SPLASH_EXTRA_FILEPATH);
         this->data->assets.LoadTexture("scorebar", SCOREBAR_FILEPATH);

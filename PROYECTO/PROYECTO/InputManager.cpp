@@ -25,4 +25,9 @@ namespace DevJAD {
     sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow &window){
         return sf::Mouse::getPosition(window);
     }
+    
+    bool InputManager::IsJumping(sf::Keyboard::Key key){
+        return key == sf::Keyboard::Space;
+    }
+    
 }
