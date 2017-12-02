@@ -43,7 +43,7 @@ DerivedData/
 *.sln
 *.vcxproj.*
 
-PROYECTO/PSD/
+#PROYECTO/PSD/
 PROYECTO/SFML/
 Debug/
 Relase/
