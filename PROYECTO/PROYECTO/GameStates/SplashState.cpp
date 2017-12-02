@@ -28,7 +28,10 @@ namespace DevJAD {
         this->data->assets.LoadTexture("main menu", MAIN_MENU_FILEPATH);
         this->data->assets.LoadTexture("main title", MAIN_TITLE_FILEPATH);
         this->data->assets.LoadTexture("you win", WIN_TEXT_PATH);
+        
         this->data->assets.LoadFont("display", SCOREBAR_FONT_FILEPATH);
+        this->data->assets.LoadFont("credits", CREDITS_FONT_FILEPATH);
+        
         this->data->assets.LoadSoundBuffer("main click", MAIN_SOUND_CLICK);
         this->data->assets.LoadSoundBuffer("main hover", MAIN_SOUND_HOVER);
         this->data->assets.LoadSoundBuffer("sea attack", SEA_ATTACK);

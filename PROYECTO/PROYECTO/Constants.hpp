@@ -58,6 +58,8 @@
 
 #define SCOREBAR_FILEPATH "Assets/images/scorebar.png"
 #define SCOREBAR_FONT_FILEPATH "Assets/fonts/display.ttf"
+#define CREDITS_FONT_FILEPATH "Assets/fonts/Credit.ttf"
+
 // splash
 #define SPASH_BACKGROUND_FILEPATH ""
 #define SPLASH_EXTRA_FILEPATH "Assets/images/extra_splash.png"

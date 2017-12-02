@@ -13,6 +13,7 @@
 #include "../State.hpp"
 #include "../Game.hpp"
 #include "../Utils.hpp"
+#include "CreditsState.hpp"
 
 namespace DevJAD {
     

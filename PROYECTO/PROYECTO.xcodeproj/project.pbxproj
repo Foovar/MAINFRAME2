@@ -12,6 +12,7 @@
 		FA26B7711FD2D1940076DBF1 /* TipsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B76F1FD2D1940076DBF1 /* TipsController.cpp */; };
 		FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */; };
 		FA26B7771FD2F5120076DBF1 /* WinState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B7751FD2F5120076DBF1 /* WinState.cpp */; };
+		FA26B77A1FD305490076DBF1 /* CreditsState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B7781FD305490076DBF1 /* CreditsState.cpp */; };
 		FA3878BD1FAD99AF002E2541 /* SeaGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */; };
 		FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412E91FAAFACF00E5E3A0 /* Game.cpp */; };
 		FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412ED1FAAFF7100E5E3A0 /* SplashState.cpp */; };
@@ -79,6 +80,8 @@
 		FA26B7731FD2D7DF0076DBF1 /* BranchesController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BranchesController.hpp; sourceTree = "<group>"; };
 		FA26B7751FD2F5120076DBF1 /* WinState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinState.cpp; sourceTree = "<group>"; };
 		FA26B7761FD2F5120076DBF1 /* WinState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinState.hpp; sourceTree = "<group>"; };
+		FA26B7781FD305490076DBF1 /* CreditsState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreditsState.cpp; sourceTree = "<group>"; };
+		FA26B7791FD305490076DBF1 /* CreditsState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CreditsState.hpp; sourceTree = "<group>"; };
 		FA3878BB1FAD99AF002E2541 /* SeaGameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeaGameState.cpp; sourceTree = "<group>"; };
 		FA3878BC1FAD99AF002E2541 /* SeaGameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeaGameState.hpp; sourceTree = "<group>"; };
 		FA4412E91FAAFACF00E5E3A0 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				FA6120671FCA7BF600EE1482 /* TestState.hpp */,
 				FA26B7751FD2F5120076DBF1 /* WinState.cpp */,
 				FA26B7761FD2F5120076DBF1 /* WinState.hpp */,
+				FA26B7781FD305490076DBF1 /* CreditsState.cpp */,
+				FA26B7791FD305490076DBF1 /* CreditsState.hpp */,
 			);
 			path = GameStates;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4412F21FABF69200E5E3A0 /* MainMenuState.cpp in Sources */,
+				FA26B77A1FD305490076DBF1 /* CreditsState.cpp in Sources */,
 				FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */,
 				FA52DCA31FAAF79700EEF301 /* InputManager.cpp in Sources */,
 				FA0E3EB01FB0228D00A5ABDA /* Collision.cpp in Sources */,
