@@ -58,7 +58,8 @@
 
 #define SCOREBAR_FILEPATH "Assets/images/scorebar.png"
 #define SCOREBAR_FONT_FILEPATH "Assets/fonts/display.ttf"
-#define CREDITS_FONT_FILEPATH "Assets/fonts/Credit.ttf"
+#define CREDITS_FONT_FILEPATH "Assets/fonts/credit.ttf"
+#define SCORE_GAMEOVER_FONT_FILEPATH "Assets/fonts/ka1.ttf"
 
 // splash
 #define SPASH_BACKGROUND_FILEPATH ""
@@ -97,8 +98,13 @@
 // WIN
 
 #define WIN_TEXT_PATH "Assets/images/YouWin.png"
+#define FINISH_MUSIC "Assets/sounds/WinSound.wav"
 
 #define DEAD_SOUND_FILEPATH "Assets/sounds/DeadSound.wav"
+
+// credits
+#define CREDITS_MUSIC_BACKGROUND "Assets/sounds/CreditSong.flac"
+
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"
 #define BRANCH_FILEPATH "Assets/images/branches.png"

@@ -13,7 +13,7 @@
 #include "../State.hpp"
 #include "../Game.hpp"
 #include "../Constants.hpp"
-
+#include "MainMenuState.hpp"
 
 namespace DevJAD {
     
@@ -21,6 +21,11 @@ namespace DevJAD {
         GameDataRef data;
         sf::Clock clock;
         sf::Text text;
+        sf::Text team;
+        sf::Text title1;
+        sf::Text title2;
+        sf::Music musicBackground;
+        sf::Sprite logo;
         
     public:
         CreditsState(GameDataRef data);

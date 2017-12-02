@@ -93,8 +93,8 @@ namespace DevJAD {
         this->lianas->Update(dt);
         if(this->movingScreen){
             if(this->clock.getElapsedTime().asSeconds() < (this->currentLiana < 2 ? 0.6 : 0.8)){
-                this->viewScreen.move(dt * 505, 0);
-                this->viewAccum += dt * 505;
+                this->viewScreen.move(dt * 520, 0);
+                this->viewAccum += dt * 520;
             }else {
                 this->movingScreen = false;
             }

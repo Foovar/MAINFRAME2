@@ -175,9 +175,9 @@ namespace DevJAD {
         if(this->isGameOver && this->alphaGameOver >= 255){
             this->musicBackground.stop();
             if(!this->isWon)
-                this->data->machine.AddState(StateRef(new GameOverState(this->data)));
+                this->data->machine.AddState(StateRef(new GameOverState(this->data, this->score->GetScore())));
             else
-                this->data->machine.AddState(StateRef(new WinState(this->data)), true);
+                this->data->machine.AddState(StateRef(new WinState(this->data, this->score->GetScore())), true);
         }
         
     }

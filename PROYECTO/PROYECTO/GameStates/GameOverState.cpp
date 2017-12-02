@@ -14,6 +14,7 @@ namespace DevJAD {
     
     GameOverState::GameOverState(GameDataRef data, int score){
         this->data = data;
+        this->score = score;
     }
     
     void GameOverState::Init(){
@@ -37,6 +38,11 @@ namespace DevJAD {
         this->buttonExit.setPosition((this->box.getPosition().x + this->box.getLocalBounds().width / 2) - this->buttonExit.getLocalBounds().width / 1.5 , this->box.getPosition().y + this->box.getGlobalBounds().height - (this->buttonExit.getLocalBounds().height / 2));
         
         this->buttonReStart.setPosition((this->box.getPosition().x + this->box.getLocalBounds().width / 2) + this->buttonExit.getLocalBounds().width / 1.5, this->box.getPosition().y + this->box.getGlobalBounds().height - (this->buttonReStart.getLocalBounds().height / 2));
+    
+        this->scoreText.setFont(this->data->assets.GetFont("ka1"));
+        this->scoreText.setString("SCORE: "+ std::to_string(this->score));
+        this->scoreText.setPosition(this->data->window.getView().getCenter().x - this->scoreText.getLocalBounds().width /2, this->data->window.getView().getCenter().y + this->scoreText.getLocalBounds().height + 50);
+    
     }
     
     void GameOverState::HandleInput(){
@@ -72,6 +78,7 @@ namespace DevJAD {
         this->data->window.draw(this->box);
         this->data->window.draw(this->buttonExit);
         this->data->window.draw(this->buttonReStart);
+        this->data->window.draw(this->scoreText);
         this->data->window.display();
     }
     

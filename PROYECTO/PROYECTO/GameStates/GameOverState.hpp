@@ -23,6 +23,9 @@ namespace DevJAD {
         sf::Sprite background;
         sf::Sprite buttonReStart;
         sf::Sprite buttonExit;
+        int score;
+        sf::Text scoreText;
+        
         
     public:
         GameOverState(GameDataRef data, int score = 0);

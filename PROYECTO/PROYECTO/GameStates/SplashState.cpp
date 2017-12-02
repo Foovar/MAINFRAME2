@@ -31,6 +31,7 @@ namespace DevJAD {
         
         this->data->assets.LoadFont("display", SCOREBAR_FONT_FILEPATH);
         this->data->assets.LoadFont("credits", CREDITS_FONT_FILEPATH);
+        this->data->assets.LoadFont("ka1", SCORE_GAMEOVER_FONT_FILEPATH);
         
         this->data->assets.LoadSoundBuffer("main click", MAIN_SOUND_CLICK);
         this->data->assets.LoadSoundBuffer("main hover", MAIN_SOUND_HOVER);
@@ -68,6 +69,7 @@ namespace DevJAD {
                     this->transparent = 255 - ((seconds - (float)SPLASH_DURATION ) * 255.0);
                     this->extra.setColor(sf::Color(255, 255, 255, this->transparent ));
                     this->logo.setColor(sf::Color(255, 255, 255, this->transparent ));
+                   // this->logo.move(-(dt * 500), 0);
                 }
                 if(this->transparent <= 5)
                     this->data->machine.AddState( StateRef(new MainMenuState(this->data)), true );
