@@ -1,10 +1,3 @@
-//
-//  MainMenuState.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 2/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef MainMenuState_hpp
 #define MainMenuState_hpp

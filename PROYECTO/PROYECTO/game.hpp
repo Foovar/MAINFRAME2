@@ -1,10 +1,4 @@
-//
-//  Game.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 2/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #ifndef Game_hpp
 #define Game_hpp

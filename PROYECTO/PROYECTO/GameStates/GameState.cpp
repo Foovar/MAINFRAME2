@@ -1,10 +1,3 @@
-//
-//  GameState.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 3/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #include <sstream>
 #include "GameState.hpp"

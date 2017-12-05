@@ -1,10 +1,4 @@
-//
-//  Flash.cpp
-//  PROYECTO
-//
-//  Created by DevJAD on 12/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
+
 
 #include "Flash.hpp"
 namespace DevJAD

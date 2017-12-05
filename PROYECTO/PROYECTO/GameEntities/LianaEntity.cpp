@@ -1,10 +1,3 @@
-//
-//  LianaEntity.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 26/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #include "../GameEntities/LianaEntity.hpp"
 #include "iostream"

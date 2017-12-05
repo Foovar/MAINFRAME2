@@ -1,10 +1,4 @@
-//
-//  Flash.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 12/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #ifndef Flash_hpp
 #define Flash_hpp

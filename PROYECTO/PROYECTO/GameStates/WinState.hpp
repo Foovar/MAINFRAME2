@@ -1,10 +1,4 @@
-//
-//  WinState.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 2/12/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #ifndef WinState_hpp
 #define WinState_hpp

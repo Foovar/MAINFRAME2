@@ -1,10 +1,3 @@
-//
-//  LianaEntity.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 26/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef LianaEntity_hpp
 #define LianaEntity_hpp

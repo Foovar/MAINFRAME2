@@ -1,10 +1,3 @@
-//
-//  GameState.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 3/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef GameState_hpp
 #define GameState_hpp

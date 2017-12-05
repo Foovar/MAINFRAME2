@@ -1,10 +1,4 @@
-//
-//  SplashState.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 2/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 #include <sstream>
 #include "SplashState.hpp"
 #include "../Constants.hpp"

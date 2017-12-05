@@ -1,10 +1,3 @@
-//
-//  Collision.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 5/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef Collision_hpp
 #define Collision_hpp

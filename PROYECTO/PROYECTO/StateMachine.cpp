@@ -1,10 +1,4 @@
-//
-//  StateMachine.cpp
-//  PROYECTO
-//
-//  Created by DevJAD on 1/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
+
 
 #include "StateMachine.hpp"
 

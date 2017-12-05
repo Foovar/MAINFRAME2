@@ -1,10 +1,3 @@
-//
-//  InputManager.cpp
-//  PROYECTO
-//
-//  Created by DevJAD on 2/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
 
 #include "InputManager.hpp"
 
