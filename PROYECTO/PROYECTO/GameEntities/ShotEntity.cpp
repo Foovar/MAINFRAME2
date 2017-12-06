@@ -1,10 +1,4 @@
-//
-//  Shot.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 25/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #include "../GameEntities/ShotEntity.hpp"
 #include "iostream"

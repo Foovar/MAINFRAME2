@@ -1,10 +1,4 @@
-//
-//  SplashState.hpp
-//  PROYECTO
-//
-//  Created by DevJAD on 2/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
+
 
 #ifndef SplashState_hpp
 #define SplashState_hpp

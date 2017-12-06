@@ -1,10 +1,4 @@
-//
-//  SharkEntity.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 8/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #ifndef SharkEntity_hpp
 #define SharkEntity_hpp

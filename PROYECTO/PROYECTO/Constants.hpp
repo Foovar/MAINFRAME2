@@ -1,10 +1,4 @@
-//
-//  Constants.hpp
-//  PROYECTO
-//
-//  Created by DevJAD on 1/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
+
 #pragma once
 #ifndef Header_h
 #define Header_h

@@ -1,10 +1,3 @@
-//
-//  SeaGameState.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 4/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef SeaGameState_hpp
 #define SeaGameState_hpp

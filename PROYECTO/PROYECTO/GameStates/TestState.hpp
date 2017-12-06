@@ -1,10 +1,3 @@
-//
-//  TestState.hpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 25/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #ifndef TestState_hpp
 #define TestState_hpp

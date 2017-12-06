@@ -1,10 +1,4 @@
-//
-//  TestState.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 25/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
+
 
 #include "TestState.hpp"
 

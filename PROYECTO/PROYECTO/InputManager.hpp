@@ -1,10 +1,3 @@
-//
-//  InputManager.hpp
-//  PROYECTO
-//
-//  Created by DevJAD on 2/11/17.
-//  Copyright © 2017 DevJAD. All rights reserved.
-//
 
 #ifndef InputManager_hpp
 #define InputManager_hpp

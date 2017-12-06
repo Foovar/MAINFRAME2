@@ -1,10 +1,3 @@
-//
-//  Game.cpp
-//  PROYECTO
-//
-//  Created by Alex Paredes on 2/11/17.
-//  Copyright © 2017 Alex Paredes. All rights reserved.
-//
 
 #include "Game.hpp"
 #include "GameStates/SplashState.hpp"
