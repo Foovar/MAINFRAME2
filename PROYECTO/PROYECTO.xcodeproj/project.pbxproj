@@ -31,6 +31,7 @@
 		FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CDF1FAC33DB0064545E /* GameState.cpp */; };
 		FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CE21FAC3D220064545E /* GameOverState.cpp */; };
 		FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA822D21FB90C5F0077B7B5 /* Flash.cpp */; };
+		FAA862221FDB3A0800B4F41B /* MountainState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA862201FDB3A0800B4F41B /* MountainState.cpp */; };
 		FAAAE40F1FB37B4A00EDA356 /* SharkEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE40D1FB37B4A00EDA356 /* SharkEntity.cpp */; };
 		FAAAE4131FB37FF900EDA356 /* SharkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE4111FB37FF900EDA356 /* SharkController.cpp */; };
 		FAB180F01FA450CD00189F56 /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EB1FA450CD00189F56 /* libsfml-audio.2.4.2.dylib */; };
@@ -119,6 +120,8 @@
 		FA7C6CE31FAC3D220064545E /* GameOverState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOverState.hpp; sourceTree = "<group>"; };
 		FAA822D21FB90C5F0077B7B5 /* Flash.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Flash.cpp; sourceTree = "<group>"; };
 		FAA822D31FB90C5F0077B7B5 /* Flash.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Flash.hpp; sourceTree = "<group>"; };
+		FAA862201FDB3A0800B4F41B /* MountainState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MountainState.cpp; sourceTree = "<group>"; };
+		FAA862211FDB3A0800B4F41B /* MountainState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MountainState.hpp; sourceTree = "<group>"; };
 		FAAAE40D1FB37B4A00EDA356 /* SharkEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SharkEntity.cpp; sourceTree = "<group>"; };
 		FAAAE40E1FB37B4A00EDA356 /* SharkEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SharkEntity.hpp; sourceTree = "<group>"; };
 		FAAAE4111FB37FF900EDA356 /* SharkController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SharkController.cpp; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				FA26B7761FD2F5120076DBF1 /* WinState.hpp */,
 				FA26B7781FD305490076DBF1 /* CreditsState.cpp */,
 				FA26B7791FD305490076DBF1 /* CreditsState.hpp */,
+				FAA862201FDB3A0800B4F41B /* MountainState.cpp */,
+				FAA862211FDB3A0800B4F41B /* MountainState.hpp */,
 			);
 			path = GameStates;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */,
 				FA6120681FCA7BF600EE1482 /* TestState.cpp in Sources */,
 				FA4412EB1FAAFACF00E5E3A0 /* Game.cpp in Sources */,
+				FAA862221FDB3A0800B4F41B /* MountainState.cpp in Sources */,
 				FA4DE16C1FCB67100013F028 /* LianaEntity.cpp in Sources */,
 				FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */,
 				FA26B7711FD2D1940076DBF1 /* TipsController.cpp in Sources */,

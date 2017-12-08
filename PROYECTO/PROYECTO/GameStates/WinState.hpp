@@ -5,7 +5,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../State.hpp"
-#include "../game.hpp"
+#include "../Game.hpp"
 #include "../Constants.hpp"
 
 namespace DevJAD {
