@@ -99,6 +99,10 @@
 // credits
 #define CREDITS_MUSIC_BACKGROUND "Assets/sounds/CreditSong.flac"
 
+// RESCUE
+#define RESCUE_BACKGROUND_FILEPATH "Assets/images/rescue_background.png"
+#define RESCUE_MUSIC_BACKGROUND "Assets/sounds/rescue.flac"
+
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"
 #define BRANCH_FILEPATH "Assets/images/branches.png"
