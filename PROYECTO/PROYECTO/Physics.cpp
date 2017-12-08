@@ -9,7 +9,6 @@ namespace DevJAD {
         this->power = power;
         this->ax = ax;
         this->ay = ay;
-        //this->v = { cos(this->AngleToRad(angle)) *  power, -sin(this->AngleToRad(angle)) * power };
         this->v = { power * cos(this->AngleToRad(angle)), power *  sin(AngleToRad(angle)) };
     }
     
