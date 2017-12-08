@@ -108,19 +108,22 @@ namespace DevJAD {
                         if(this->framePosX == 0){
                             this->totalFrames = 15;
                         }else this->totalFrames = 14;
-                        
                         this->framePosY = 535;
                         
                         this->spriteCharacter.setPosition( this->physics->GetPosAtTime( this->timeJump ).x, this->physics->GetPosAtTime( this->timeJump ).y );
                         this->timeJump+=0.2;
                     }
                     break;
+				case CHARACTER_STATE_WALK:
+					this->framePosY = 265;
+					this->totalFrames = 3;
+					this->switchTime = 0.08;
+					break;
                 default:
                     this->totalFrames = 9;
                     this->switchTime = 0.08;
                     break;
             }
-            
             if(this->characterStatus != CHARACTER_STATE_ATTACK  && this->characterStatus != CHARACTER_STATE_JUMPING)
                 this->characterStatus = this->defaultState;
             else if(this->attackCompleted || this->jumpCompleted){
