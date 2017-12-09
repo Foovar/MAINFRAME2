@@ -42,6 +42,9 @@
 #define CHARACTER_STATE_ATTACK 4
 #define CHARACTER_STATE_DEAD 5
 
+#define CHARACTER__PRINCESS_STATE_RUNING 6
+#define CHARACTER__PRINCESS_STATE_SLEEP 7
+
 #define CHARACTER_MOVE_UP 20
 #define CHARACTER_MOVE_DOWN 21
 #define CHARACTER_MOVE_LEFT 22
@@ -85,6 +88,9 @@
 #define MT_ROCK_FILEPATH "Assets/images/mt_rock.png"
 #define MT_MUSIC_BACKGROUND "Assets/sounds/mt-background.flac"
 #define MT_SOUND_BACKGROUND "Assets/sounds/mt-background.flac"
+
+//FINAl STate
+#define FS_BACKGROUND_FILEPATH "Assets/images/final_background.jpg"
 
 //game over
 #define GAME_OVER_BOX_FILEPATH "Assets/images/game_over.png"

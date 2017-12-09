@@ -5,7 +5,7 @@
 #include "MainMenuState.hpp"
 #include <iostream>
 #include "../Utils.hpp"
-#include "MountainGameState.hpp"
+#include "FinalState.hpp"
 
 namespace DevJAD {
     
@@ -67,7 +67,7 @@ namespace DevJAD {
                    // this->logo.move(-(dt * 500), 0);
                 }
                 if(this->transparent <= 5)
-                    this->data->machine.AddState( StateRef(new MountainGameState(this->data)), true );
+                    this->data->machine.AddState( StateRef(new FinalState(this->data)), true );
             }
         }
     }

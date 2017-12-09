@@ -3,14 +3,18 @@
 #include "../Game.hpp"
 #include "../State.hpp"
 #include "../Characters/MarioCharacter.hpp"
+#include "../Characters/PrincessCharacter.hpp"
 
 namespace DevJAD {
 
 	class FinalState : public State {
 		GameDataRef data;
 		MarioCharacter* marioSprite;
+		princessCharacter* princesaSprite;
 		sf::Sprite spriteBackground;
-		sf::Sound sounDBackground;
+		sf::Sound soundBackGround;
+		sf::Clock clock_princess;
+			
 	public:
 		FinalState(GameDataRef data);
 		void Init();

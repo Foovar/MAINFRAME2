@@ -117,7 +117,7 @@ namespace DevJAD {
 				case CHARACTER_STATE_WALK:
 					this->framePosY = 265;
 					this->totalFrames = 3;
-					this->switchTime = 0.08;
+					this->switchTime = 0.15;
 					break;
                 default:
                     this->totalFrames = 9;
@@ -162,8 +162,7 @@ namespace DevJAD {
                 this->framePosY = 625;
                 this->totalFrames = 6;
                 this->spriteCharacter.move(0, dt * 200);
-            }
-            
+			}
         }
     }
     
