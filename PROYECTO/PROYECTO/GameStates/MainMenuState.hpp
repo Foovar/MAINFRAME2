@@ -7,6 +7,7 @@
 #include "../Utils.hpp"
 #include "CreditsState.hpp"
 #include "MountainState.hpp"
+#include "../GameControllers/FileController.hpp"
 
 namespace DevJAD {
     
@@ -20,7 +21,7 @@ namespace DevJAD {
         sf::Sprite menuItemQuit;
         sf::Sprite menuItemOptions;
         sf::Sprite menuItemCredits;
-        
+        FileController * fs;
         bool startHover, quitHover;
         bool optionsHover, creditsHover;
         

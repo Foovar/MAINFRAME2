@@ -24,6 +24,8 @@ namespace DevJAD {
         this->musicBackground.play();
         this->alphaGameOver = 0;
         
+        this->scoreBar = new ScoreBar(this->data);
+        
         background.setScale(0.5, 0.5);
         if(this->data->screenType == SCREEN_SIZE_TYPE_MEDIUM)
             background.setScale(0.3, 0.30);
@@ -48,7 +50,7 @@ namespace DevJAD {
         this->collision = new Collision;
         this->movingScreen = false;
         this->SpawnTipsAndBranches();
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 10; i++){
             this->lianas->SpawnLianas();
         }
         this->shapeGameOver.setFillColor(sf::Color(255, 255, 255, 0));
@@ -64,6 +66,8 @@ namespace DevJAD {
     
     void GameState::MoveNextScreen(){
         if(this->movingScreen) return;
+        if(!this->isGameOver)
+            this->scoreBar->AddScore(35);
         //this->lianas->SpawnLianas();
         this->SpawnTipsAndBranches();
         this->movingScreen = true;
@@ -98,12 +102,12 @@ namespace DevJAD {
         if(this->marioCharacter->GetState() == CHARACTER_STATE_HANG){
             
             this->marioCharacter->SetPosition(lposition.x - this->marioCharacter->GetSprite().getGlobalBounds().width / 2, lposition.y - this->marioCharacter->GetSprite().getGlobalBounds().height / 2);
-        }else if(this->currentLiana < 7){
+        }else if(this->currentLiana < 9){
             lposition = this->lianas->GetPosition(this->currentLiana + 1);
             if(this->collision->CheckRectCollision(this->marioCharacter->GetSprite().getGlobalBounds(), sf::FloatRect( lposition.x, lposition.y - 10, 5, 20 ))){
                 this->marioCharacter->SetState(CHARACTER_STATE_HANG);
                 this->MoveNextScreen();
-                if(this->currentLiana == 6) this->isWon = true;
+                if(this->currentLiana == 8) this->isWon = true;
             }
         }
         
@@ -122,9 +126,9 @@ namespace DevJAD {
         if(this->isGameOver && this->alphaGameOver >= 255){
             this->musicBackground.stop();
             if(!this->isWon)
-                this->data->machine.AddState(StateRef(new GameOverState(this->data)));
+                this->data->machine.AddState(StateRef(new GameOverState(this->data, this->scoreBar->GetScore())), true);
             else
-                this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
+                this->data->machine.AddState(StateRef(new SeaGameState(this->data, this->scoreBar->GetScore())), true);
         }
         
     }
@@ -139,6 +143,7 @@ namespace DevJAD {
         this->marioCharacter->Draw();
         this->tips->Draw();
         this->branches->Draw();
+        this->scoreBar->Draw();
         if(this->isGameOver){
             this->shapeGameOver.setFillColor(sf::Color(255, 255, 255, this->alphaGameOver));
             this->data->window.draw(this->shapeGameOver);
@@ -147,6 +152,7 @@ namespace DevJAD {
             else
                 alphaGameOver = 255;
         }
+        
         this->data->window.display();
     }
     

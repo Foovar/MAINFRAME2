@@ -38,6 +38,10 @@ namespace DevJAD {
         this->score += score;
     }
     
+    void ScoreBar::SetScore(int score){
+        this->score = score;
+    }
+    
     int ScoreBar::GetScore(){
         return this->score;
     }

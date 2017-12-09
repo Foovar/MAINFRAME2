@@ -15,6 +15,7 @@
 #include "../Characters/MarioCharacter.hpp"
 #include "../ScoreBar.hpp"
 #include "WinState.hpp"
+#include "MountainState.hpp"
 
 namespace DevJAD {
     
@@ -39,10 +40,10 @@ namespace DevJAD {
         SharkController * sharks;
         float maxDuration, alphaGameOver;
         Flash * flash;
-        int gameState;
+        int gameState, prevScore;
         
     public:
-        SeaGameState(GameDataRef data);
+        SeaGameState(GameDataRef data, int score = 0);
         void Init();
         void HandleInput();
         void Update(float dt);

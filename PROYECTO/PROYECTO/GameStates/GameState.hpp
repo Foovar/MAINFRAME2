@@ -14,8 +14,8 @@
 #include "../GameControllers/BranchesController.hpp"
 #include "GameOverState.hpp"
 #include "SeaGameState.hpp"
-
-
+#include "../ScoreBar.hpp"
+#include "MountainState.hpp"
 namespace DevJAD {
     
     class GameState : public State {
@@ -34,6 +34,7 @@ namespace DevJAD {
         bool isGameOver, isWon;
         sf::RectangleShape shapeGameOver;
         sf::Sound deadSound;
+        ScoreBar * scoreBar;
         
     public:
         GameState(GameDataRef data);

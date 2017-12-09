@@ -53,7 +53,6 @@ namespace DevJAD {
     void MarioCharacter::Animate(float dt){
         if(this->clock.getElapsedTime().asSeconds() > this->switchTime){
             this->spriteCharacter.setTextureRect(sf::IntRect((this->frameInterator * 110) + this->framePosX, this->framePosY, 110, 90));
-            std::cout << "Total frames" << this->totalFrames << "- Intertator: " << this->frameInterator << std::endl;
             if(this->characterStatus == CHARACTER_STATE_ATTACK && this->frameInterator > this->totalFrames / 3){
                 this->shotEntity->Shoot(this->spriteCharacter.getPosition());
             }
@@ -116,7 +115,7 @@ namespace DevJAD {
                         
                     }else{
                         this->framePosY = 355;
-                        this->switchTime = 0.1;
+                        this->switchTime = 0.15;
                         this->totalFrames = 7;
                     }
                     break;
@@ -124,6 +123,9 @@ namespace DevJAD {
                         this->framePosY = 265;
                         this->totalFrames = 3;
                         this->switchTime = 0.15;
+                        if(this->frameInterator > this->totalFrames){
+                            this->frameInterator = 0;
+                        }
                     break;
                 default:
                     this->totalFrames = 9;

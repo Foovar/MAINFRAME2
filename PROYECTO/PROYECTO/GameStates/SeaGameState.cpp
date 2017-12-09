@@ -3,8 +3,9 @@
 
 namespace DevJAD {
     
-    SeaGameState::SeaGameState(GameDataRef data){
+    SeaGameState::SeaGameState(GameDataRef data, int _score){
         this->data = data;
+        this->prevScore = _score;
         this->viewScreen = sf::View(this->data->window.getDefaultView());
         this->maxDuration = this->viewScreen.getSize().x;
         this->gameState = IS_PLAYING;
@@ -38,6 +39,7 @@ namespace DevJAD {
         this->coral.setPosition(0, this->background.getGlobalBounds().height - this->coral.getGlobalBounds().height);
         this->musicBackground.setVolume(50.f);
         this->musicBackground.play();
+        this->score->SetScore(this->prevScore);
     }
     
     void SeaGameState::HandleInput(){
@@ -159,18 +161,12 @@ namespace DevJAD {
             }
         }
         
-        /*if(this->gameState == IS_GAME_OVER){
-            this->flash->Show(dt);
-            if(this->clock.getElapsedTime().asSeconds() > GAME_OVER_AFTER_FLASH / 1000){
-                this->data->machine.AddState(StateRef(new GameOverState(this->data)), true);
-            }
-        }*/
         if(this->isGameOver && this->alphaGameOver >= 255){
             this->musicBackground.stop();
             if(!this->isWon)
-                this->data->machine.AddState(StateRef(new GameOverState(this->data, this->score->GetScore())));
+                this->data->machine.AddState(StateRef(new GameOverState(this->data, this->score->GetScore())), true);
             else
-                this->data->machine.AddState(StateRef(new WinState(this->data, this->score->GetScore())), true);
+                this->data->machine.AddState(StateRef(new MountainState(this->data, this->score->GetScore())), true);
         }
         
     }

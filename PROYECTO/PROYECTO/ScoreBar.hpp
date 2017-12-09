@@ -17,6 +17,7 @@ namespace DevJAD {
         ScoreBar(GameDataRef _data);
         void Draw();
         void AddScore(int score);
+        void SetScore(int score);
         int GetScore();
         void AddLife(int life);
         void SubLife(int life);

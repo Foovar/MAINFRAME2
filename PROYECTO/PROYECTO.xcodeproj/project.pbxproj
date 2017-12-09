@@ -20,6 +20,7 @@
 		FA4412F21FABF69200E5E3A0 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4412F01FABF69200E5E3A0 /* MainMenuState.cpp */; };
 		FA4DE16C1FCB67100013F028 /* LianaEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4DE16A1FCB67100013F028 /* LianaEntity.cpp */; };
 		FA4DE16F1FCB7BFC0013F028 /* LianaController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */; };
+		FA506D4C1FDC75D100F52F37 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA506D4A1FDC75D100F52F37 /* FileController.cpp */; };
 		FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC931FAAD40E00EEF301 /* main.cpp */; };
 		FA52DC981FAAD4A700EEF301 /* Assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA52DC961FAAD48B00EEF301 /* Assets */; };
 		FA52DC9D1FAADDAE00EEF301 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA52DC9B1FAADDAE00EEF301 /* StateMachine.cpp */; };
@@ -99,6 +100,8 @@
 		FA4DE16B1FCB67100013F028 /* LianaEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LianaEntity.hpp; sourceTree = "<group>"; };
 		FA4DE16D1FCB7BFC0013F028 /* LianaController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LianaController.cpp; sourceTree = "<group>"; };
 		FA4DE16E1FCB7BFC0013F028 /* LianaController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LianaController.hpp; sourceTree = "<group>"; };
+		FA506D4A1FDC75D100F52F37 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
+		FA506D4B1FDC75D100F52F37 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
 		FA52DC931FAAD40E00EEF301 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FA52DC961FAAD48B00EEF301 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		FA52DC991FAAD58700EEF301 /* Constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				FA26B7731FD2D7DF0076DBF1 /* BranchesController.hpp */,
 				FA25353C1FDBC571002CC0BA /* StoneController.cpp */,
 				FA25353D1FDBC571002CC0BA /* StoneController.hpp */,
+				FA506D4A1FDC75D100F52F37 /* FileController.cpp */,
+				FA506D4B1FDC75D100F52F37 /* FileController.hpp */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */,
 				FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */,
 				FAA862251FDB49C900B4F41B /* StoneEntity.cpp in Sources */,
+				FA506D4C1FDC75D100F52F37 /* FileController.cpp in Sources */,
 				FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */,
 				FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */,
 				FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */,
