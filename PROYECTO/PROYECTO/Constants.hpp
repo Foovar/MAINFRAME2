@@ -3,8 +3,6 @@
 #ifndef Header_h
 #define Header_h
 
-#include <SFML/Graphics.hpp>
-
 #define SCREEN_WIDTH 1324.0f
 #define SCREEN_HEIGHT 1024.0f
 

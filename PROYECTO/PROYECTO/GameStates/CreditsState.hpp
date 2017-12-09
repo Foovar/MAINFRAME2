@@ -1,8 +1,5 @@
-
-
 #ifndef CreditsState_hpp
 #define CreditsState_hpp
-
 #include <SFML/Graphics.hpp>
 #include "../State.hpp"
 #include "../Game.hpp"
