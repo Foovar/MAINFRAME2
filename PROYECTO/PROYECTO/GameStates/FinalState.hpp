@@ -14,7 +14,8 @@ namespace DevJAD {
 		sf::Sprite spriteBackground;
 		sf::Sound soundBackGround;
 		sf::Clock clock_princess;
-			
+		int moveX;
+		sf::Clock clock;
 	public:
 		FinalState(GameDataRef data);
 		void Init();

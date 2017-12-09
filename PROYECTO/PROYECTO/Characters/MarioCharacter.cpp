@@ -53,7 +53,6 @@ namespace DevJAD {
     void MarioCharacter::Animate(float dt){
         if(this->clock.getElapsedTime().asSeconds() > this->switchTime){
             this->spriteCharacter.setTextureRect(sf::IntRect((this->frameInterator * 110) + this->framePosX, this->framePosY, 110, 90));
-            
             if(this->characterStatus == CHARACTER_STATE_ATTACK && this->frameInterator > this->totalFrames / 3){
                 this->shotEntity->Shoot(this->spriteCharacter.getPosition());
             }
@@ -62,7 +61,7 @@ namespace DevJAD {
                 this->frameInterator = 0;
                 if(this->characterStatus == CHARACTER_STATE_ATTACK)
                     this->attackCompleted = true;
-                if(this->characterStatus == CHARACTER_STATE_JUMPING)
+                if(this->characterStatus == CHARACTER_STATE_JUMPING && this->defaultState != CHARACTER_STATE_WALK)
                     this->framePosX = 110;
             }else this->frameInterator++;
             
@@ -76,6 +75,11 @@ namespace DevJAD {
             this->shotEntity->Update(dt);
             
             switch (this->characterStatus) {
+				case CHARACTER_STATE_STAND:
+					this->framePosY = 717;
+					this->totalFrames = 5;
+					this->switchTime = 0.1;
+				break;
                 case CHARACTER_STATE_SWIM:
                     this->framePosY = 0;
                     this->totalFrames = 12;
@@ -104,21 +108,26 @@ namespace DevJAD {
                     this->totalFrames = 11;
                     break;
                 case CHARACTER_STATE_JUMPING:
+                    this->spriteCharacter.setPosition( this->physics->GetPosAtTime( this->timeJump ).x, this->physics->GetPosAtTime( this->timeJump ).y );
+                    this->timeJump+=0.2;
+                    
                     if(this->defaultState == CHARACTER_STATE_HANG){
                         if(this->framePosX == 0){
                             this->totalFrames = 15;
                         }else this->totalFrames = 14;
                         this->framePosY = 535;
                         
-                        this->spriteCharacter.setPosition( this->physics->GetPosAtTime( this->timeJump ).x, this->physics->GetPosAtTime( this->timeJump ).y );
-                        this->timeJump+=0.2;
+                    }else{
+                        this->framePosY = 355;
+                        this->switchTime = 0.1;
+                        this->totalFrames = 7;
                     }
                     break;
-				case CHARACTER_STATE_WALK:
-					this->framePosY = 265;
-					this->totalFrames = 3;
-					this->switchTime = 0.15;
-					break;
+                case CHARACTER_STATE_WALK:
+                        this->framePosY = 265;
+                        this->totalFrames = 3;
+                        this->switchTime = 0.15;
+                    break;
                 default:
                     this->totalFrames = 9;
                     this->switchTime = 0.08;
@@ -150,6 +159,10 @@ namespace DevJAD {
                         this->spriteCharacter.move((dt * CHARACTER_MOVE_SPEED ), 0);
                         this->movementX += dt * CHARACTER_MOVE_SPEED;
                         break;
+					case CHARACTER_STAND:
+						this->spriteCharacter.move((dt * 0), 0);
+						this->movementX += dt * 0;
+						break;
                 }
                 this->moveAmount -= 1.5;
             }
@@ -169,7 +182,11 @@ namespace DevJAD {
     void MarioCharacter::Jump(){
         if(CHARACTER_STATE_JUMPING != this->GetState()){
             this->SetState(CHARACTER_STATE_JUMPING);
-            this->physics = new Physics(this->spriteCharacter.getPosition().x , this->spriteCharacter.getPosition().y, 45, 50, 0, 9.8);
+            if(this->defaultState == CHARACTER_STATE_WALK)
+                this->physics = new Physics(this->spriteCharacter.getPosition().x , this->spriteCharacter.getPosition().y, 90, 60, 0, 9.8);
+            else
+                this->physics = new Physics(this->spriteCharacter.getPosition().x , this->spriteCharacter.getPosition().y, 45, 50, 0, 9.8);
+            
             this->frameInterator = 0;
             this->timeJump = 0;
             this->jumpClock.restart();
@@ -201,7 +218,9 @@ namespace DevJAD {
     int MarioCharacter::GetState(){
         return this->characterStatus;
     }
-    
+    void MarioCharacter::SetRotate(float angle){
+        this->spriteCharacter.setRotation(angle);
+    }
     bool MarioCharacter::hasShoot(){
         return this->shotEntity->hasShoot();
     }

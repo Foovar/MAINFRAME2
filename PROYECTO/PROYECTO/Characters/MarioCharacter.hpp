@@ -46,7 +46,7 @@ namespace DevJAD {
         void SetPosition(sf::Vector2f position);
         void ResetAnimation();
         sf::Vector2f GetPosition();
-        
+        void SetRotate(float angle);
         void Jump();
     };
 }

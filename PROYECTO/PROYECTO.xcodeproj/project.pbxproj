@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA0E3EB01FB0228D00A5ABDA /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0E3EAE1FB0228D00A5ABDA /* Collision.cpp */; };
+		FA25353E1FDBC571002CC0BA /* StoneController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA25353C1FDBC571002CC0BA /* StoneController.cpp */; };
 		FA26B76E1FD28FA20076DBF1 /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B76C1FD28FA20076DBF1 /* Physics.cpp */; };
 		FA26B7711FD2D1940076DBF1 /* TipsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B76F1FD2D1940076DBF1 /* TipsController.cpp */; };
 		FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */; };
@@ -32,6 +33,7 @@
 		FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6CE21FAC3D220064545E /* GameOverState.cpp */; };
 		FAA822D41FB90C5F0077B7B5 /* Flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA822D21FB90C5F0077B7B5 /* Flash.cpp */; };
 		FAA862221FDB3A0800B4F41B /* MountainState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA862201FDB3A0800B4F41B /* MountainState.cpp */; };
+		FAA862251FDB49C900B4F41B /* StoneEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA862231FDB49C900B4F41B /* StoneEntity.cpp */; };
 		FAAAE40F1FB37B4A00EDA356 /* SharkEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE40D1FB37B4A00EDA356 /* SharkEntity.cpp */; };
 		FAAAE4131FB37FF900EDA356 /* SharkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE4111FB37FF900EDA356 /* SharkController.cpp */; };
 		FAB180F01FA450CD00189F56 /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB180EB1FA450CD00189F56 /* libsfml-audio.2.4.2.dylib */; };
@@ -66,6 +68,8 @@
 /* Begin PBXFileReference section */
 		FA0E3EAE1FB0228D00A5ABDA /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		FA0E3EAF1FB0228D00A5ABDA /* Collision.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
+		FA25353C1FDBC571002CC0BA /* StoneController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StoneController.cpp; sourceTree = "<group>"; };
+		FA25353D1FDBC571002CC0BA /* StoneController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StoneController.hpp; sourceTree = "<group>"; };
 		FA26B75E1FCF54E80076DBF1 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = SFML/Frameworks; sourceTree = "<group>"; };
 		FA26B7601FCF55050076DBF1 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "SFML/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
 		FA26B7611FCF55050076DBF1 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "SFML/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		FAA822D31FB90C5F0077B7B5 /* Flash.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Flash.hpp; sourceTree = "<group>"; };
 		FAA862201FDB3A0800B4F41B /* MountainState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MountainState.cpp; sourceTree = "<group>"; };
 		FAA862211FDB3A0800B4F41B /* MountainState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MountainState.hpp; sourceTree = "<group>"; };
+		FAA862231FDB49C900B4F41B /* StoneEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StoneEntity.cpp; sourceTree = "<group>"; };
+		FAA862241FDB49C900B4F41B /* StoneEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StoneEntity.hpp; sourceTree = "<group>"; };
 		FAAAE40D1FB37B4A00EDA356 /* SharkEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SharkEntity.cpp; sourceTree = "<group>"; };
 		FAAAE40E1FB37B4A00EDA356 /* SharkEntity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SharkEntity.hpp; sourceTree = "<group>"; };
 		FAAAE4111FB37FF900EDA356 /* SharkController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SharkController.cpp; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 				FA6120641FCA676A00EE1482 /* ShotEntity.hpp */,
 				FA4DE16A1FCB67100013F028 /* LianaEntity.cpp */,
 				FA4DE16B1FCB67100013F028 /* LianaEntity.hpp */,
+				FAA862231FDB49C900B4F41B /* StoneEntity.cpp */,
+				FAA862241FDB49C900B4F41B /* StoneEntity.hpp */,
 			);
 			path = GameEntities;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 				FA26B7701FD2D1940076DBF1 /* TipsController.hpp */,
 				FA26B7721FD2D7DF0076DBF1 /* BranchesController.cpp */,
 				FA26B7731FD2D7DF0076DBF1 /* BranchesController.hpp */,
+				FA25353C1FDBC571002CC0BA /* StoneController.cpp */,
+				FA25353D1FDBC571002CC0BA /* StoneController.hpp */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -339,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4412F21FABF69200E5E3A0 /* MainMenuState.cpp in Sources */,
+				FA25353E1FDBC571002CC0BA /* StoneController.cpp in Sources */,
 				FA26B77A1FD305490076DBF1 /* CreditsState.cpp in Sources */,
 				FA7C6CE11FAC33DB0064545E /* GameState.cpp in Sources */,
 				FA52DCA31FAAF79700EEF301 /* InputManager.cpp in Sources */,
@@ -349,6 +360,7 @@
 				FA52DC951FAAD40E00EEF301 /* main.cpp in Sources */,
 				FA7C6CE41FAC3D220064545E /* GameOverState.cpp in Sources */,
 				FA6120651FCA676A00EE1482 /* ShotEntity.cpp in Sources */,
+				FAA862251FDB49C900B4F41B /* StoneEntity.cpp in Sources */,
 				FA26B7741FD2D7DF0076DBF1 /* BranchesController.cpp in Sources */,
 				FA4412EF1FAAFF7100E5E3A0 /* SplashState.cpp in Sources */,
 				FA52DCA01FAAF44000EEF301 /* AssetsManager.cpp in Sources */,

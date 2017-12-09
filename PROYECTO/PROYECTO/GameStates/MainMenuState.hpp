@@ -1,4 +1,3 @@
-
 #ifndef MainMenuState_hpp
 #define MainMenuState_hpp
 #include <SFML/Graphics.hpp>
@@ -7,6 +6,7 @@
 #include "../Game.hpp"
 #include "../Utils.hpp"
 #include "CreditsState.hpp"
+#include "MountainState.hpp"
 
 namespace DevJAD {
     

@@ -1,5 +1,3 @@
-
-
 #ifndef SharkEntity_hpp
 #define SharkEntity_hpp
 #include "../Constants.hpp"
