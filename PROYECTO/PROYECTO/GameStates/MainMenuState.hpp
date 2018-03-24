@@ -8,9 +8,9 @@
 #include "CreditsState.hpp"
 #include "MountainState.hpp"
 #include "../GameControllers/FileController.hpp"
+#include "FinalState.hpp"
 
 namespace DevJAD {
-    
     class MainMenuState : public State {
         GameDataRef data;
         sf::Clock clock;

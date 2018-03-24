@@ -89,6 +89,7 @@ namespace DevJAD {
         this->data->assets.LoadTexture("sea background", SEA_BACKGROUND_FILEPATH);
         this->data->assets.LoadTexture("forest background", FOREST_BACKGROUND_FILEPATH);
         this->data->assets.LoadTexture("mt background", MT_BACKGROUND_FILEPATH);
+        this->data->assets.LoadTexture("final background", FINAL_BACKGROUND_FILEPATH);
         this->clock.restart();
     }
     

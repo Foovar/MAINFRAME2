@@ -46,6 +46,9 @@
 #define CHARACTER_MOVE_RIGTH 23
 
 #define CHARACTER_MOVE_SPEED 450.f
+
+//
+
 // ESCENARIOS
 
 #define SCOREBAR_FILEPATH "Assets/images/scorebar.png"
@@ -100,6 +103,10 @@
 // RESCUE
 #define RESCUE_BACKGROUND_FILEPATH "Assets/images/rescue_background.png"
 #define RESCUE_MUSIC_BACKGROUND "Assets/sounds/rescue.flac"
+
+// FINAL
+
+#define FINAL_BACKGROUND_FILEPATH "Assets/images/final_background.jpg"
 
 // ENTIDADES
 #define SHARK_FILEPATH "Assets/images/shark.png"

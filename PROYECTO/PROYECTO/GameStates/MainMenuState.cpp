@@ -121,7 +121,8 @@ namespace DevJAD {
                 this->musicBackground.setLoop(false);
                 this->musicBackground.stop();
                 //this->data->machine.AddState(StateRef(new SeaGameState(this->data)), true);
-                this->data->machine.AddState(StateRef(new GameState(this->data)), true);
+                //this->data->machine.AddState(StateRef(new GameState(this->data)), true);
+                this->data->machine.AddState(StateRef(new FinalState(this->data)), true);
                 //this->data->machine.AddState(StateRef(new MountainState(this->data)), true);
             }else if(this->data->input.IsSpriteClicked(this->menuItemCredits, sf::Mouse::Button::Left, this->data->window)){
                 this->soundClick.play();
